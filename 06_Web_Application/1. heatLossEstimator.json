@@ -1,0 +1,635 @@
+// This is the statics JSON values of all possible inputs being accessed by 1. calculationservice.js
+
+{
+	"mean_rad_temp": [
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+		17,
+		18,
+		19,
+		20,
+		21,
+		22,
+		23,
+		24,
+		25,
+		26,
+		27,
+		28,
+		29,
+		30,31,32,33,34,35,36,37,38,39,40
+	],
+	"height_above_sea_level": [
+		0,
+		50,
+		100,
+		150,
+		200,
+		250,
+		300,
+		350,
+		400,
+		450,
+		500,
+		550,
+		600,
+		650
+	],
+	"average_indoor_temp": [
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+		17,
+		18,
+		19,
+		20,
+		21,
+		22,
+		23,
+		24,
+		25,
+		26,
+		27,
+		28,
+		29,
+		30
+	],
+	"immersion_heater_days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+	"rad_type": [
+		"Single Convector",
+		"Single Convector / Double Panel",
+		"Double Convector / Double Panel",
+		"Single Panel",
+		"Double Panel",
+		"Triple Panel"
+	],
+	"yes_no": ["Yes", "No"],
+	"floor_type": [
+		"Solid",
+		"Suspended",
+		"Third Party Room Below",
+		"Internal Room Below"
+	],
+	"above_roof": ["Air", "Internal Room", "Third Party Room"],
+	"u_values_external_wall": [
+		{
+			"name": "Solid Brick 102mm, plaster (2.97)",
+			"value": 2.97
+		},
+		{
+			"name": "Solid Brick 228mm, plaster (2.11)",
+			"value": 2.11
+		},
+		{
+			"name": "Solid Stone 12\" (2.78)",
+			"value": 2.78
+		},
+		{
+			"name": "Solid Stone 18 \"(2.23)",
+			"value": 2.23
+		},
+		{
+			"name": "Solid Concrete 102mm, Plaster (3.51)",
+			"value": 3.51
+		},
+		{
+			"name": "Solid Concrete 204mm, Plaster (2.8)",
+			"value": 2.8
+		},
+		{
+			"name": "Open Cavity, Brick 102mm, plaster (1.37)",
+			"value": 1.37
+		},
+		{
+			"name": "Open Cavity, Brick 102mm, Standard Aerated Block, Plaster (0.87)",
+			"value": 0.87
+		},
+		{
+			"name": "Open Cavity, Render, Standard Aerated Block, Standard Aerated Block, Plaster (0.61)",
+			"value": 0.61
+		},
+		{
+			"name": "Cavity Wall Filled, 50mm Mineral Wool, Brick 102mm, Plaster (0.56)",
+			"value": 0.56
+		},
+		{
+			"name": "Cavity Wall Filled, Mineral Wool 50mm, Brick 102mm, Standard Aerated Block, Plaster (0.45)",
+			"value": 0.45
+		},
+		{
+			"name": "Cavity Wall Filled, Mineral Wool 50mm, Render, Standard Aerated Block, Standard Aerated Block, Plaster (0.37)",
+			"value": 0.37
+		},
+		{
+			"name": "Building Regulations - 2006 (0.35)",
+			"value": 0.35
+		},
+		{
+			"name": "Timber Frame with Cladding, 100mm Insulation (0.32)",
+			"value": 0.32
+		},
+		{
+			"name": "Current Building Regulations - New Build (0.3)",
+			"value": 0.3
+		},
+		{
+			"name": "U-Value = 0.25",
+			"value": 0.25
+		},
+		{
+			"name": "U-Value = 0.2",
+			"value": 0.2
+		},
+		{
+			"name": "U-Value = 0.15",
+			"value": 0.15
+		},
+		{
+			"name": "U-Value = 0.1",
+			"value": 0.1
+		},
+		{
+			"name": "Custom Entry",
+			"value": ""
+		}
+	],
+	"u_values_internal_wall_party_wall": [
+		{
+			"name": "Plasterboard with Studding (1.72)",
+			"value": 1.72
+		},
+		{
+			"name": "Brick 102.5mm (1.76)",
+			"value": 1.76
+		},
+		{
+			"name": "Brick 215mm (1.33)",
+			"value": 1.33
+		},
+		{
+			"name": "Standard Aerated Block 100mm (1.66)",
+			"value": 1.66
+		},
+		{
+			"name": "Standard Aerated Block 125mm (1.53)",
+			"value": 1.53
+		},
+		{
+			"name": "100mm Block with Cavity (1.02)",
+			"value": 1.02
+		},
+		{
+			"name": "Custom Entry",
+			"value": ""
+		}
+	],
+	"u_values_windows": [
+		{
+			"name": "Single Glazing Wood/PVC frame (4.8)",
+			"value": 4.8
+		},
+		{
+			"name": "Single Glazing Metal frame (5.7)",
+			"value": 5.7
+		},
+		{
+			"name": "Standard Double Glazing Wood/PVC frame (2.8)",
+			"value": 2.8
+		},
+		{
+			"name": "Standard Double Glazing Metal frame (3.4)",
+			"value": 3.4
+		},
+		{
+			"name": "Double Glazing Low-E, Argon Filled Wood/PVC frame (2.1)",
+			"value": 2.1
+		},
+		{
+			"name": "Double Glazing Low-E, Argon Filled Metal frame (2.6)",
+			"value": 2.6
+		},
+		{
+			"name": "Triple Glazing Low-E, Argon Filled Wood/PVC frame (1.6)",
+			"value": 1.6
+		},
+		{
+			"name": "Triple Glazing Low-E, Argon Filled Metal frame (2)",
+			"value": 2
+		},
+		{
+			"name": "Current Building Regulations Window Wood/PVC frame (2)",
+			"value": 2
+		},
+		{
+			"name": "Current Building Regulations Window Metal frame (2.2)",
+			"value": 2.2
+		},
+		{
+			"name": "U-Value = 1.8",
+			"value": 1.8
+		},
+		{
+			"name": "U-Value = 1.5",
+			"value": 1.5
+		},
+		{
+			"name": "U-Value = 1.25",
+			"value": 1.25
+		},
+		{
+			"name": "U-Value = 1",
+			"value": 1
+		},
+		{
+			"name": "Custom Entry",
+			"value": ""
+		}
+	],
+	"u_values_doors": [
+		{ "name": "Solid Wood Door (3)", "value": 3 },
+		{ "name": "High Quality Door 50% glazing (2.2)", "value": 2.2 },
+		{ "name": "Custom Entry", "value": "" }
+	],
+	"u_value_floor": [
+		{ "name": "SGround Floor No Insulation (1.15)", "value": 1.15 },
+		{ "name": "Ground Floor 25mm Insulation (0.62)", "value": 0.62 },
+		{ "name": "Ground Floor 50mm Insulation (0.43)", "value": 0.43 },
+		{ "name": "Ground Floor 75mm Insulation (0.32)", "value": 0.32 },
+		{ "name": "Ground Floor 100mm Insulation (0.26)", "value": 0.26 },
+		{
+			"name": "Ground Floor Current Building Regulations (0.25)",
+			"value": 0.25
+		},
+		{ "name": "Ground Floor U-Value = 0.2", "value": 0.2 },
+		{ "name": "Ground Floor U-Value = 0.15", "value": 0.15 },
+		{ "name": "Ground Floor U-Value = 0.1", "value": 0.1 },
+		{
+			"name": "Intermediate Floor Timber with insulation (0.32)",
+			"value": 0.32
+		},
+		{
+			"name": "Intermediate Floor Timber without insulation (1.73)",
+			"value": 1.73
+		},
+		{ "name": "Party Floor Concrete with insulation (0.57)", "value": 0.57 },
+		{ "name": "Party Floor Concrete without insulation (1.82)", "value": 1.82 },
+		{ "name": "Custom Entry", "value": "" }
+	],
+	"u_values_roof": [
+		{ "name": "Flat Roof No Insulation (1.69)", "value": 1.69 },
+		{ "name": "Pitched Roof No Insulation (2.51)", "value": 2.51 },
+		{ "name": "50mm Insulation (0.6)", "value": 0.6 },
+		{ "name": "100mm Insulation(0.34)", "value": 0.34 },
+		{ "name": "200mm Insulation (0.18)", "value": 0.18 },
+		{ "name": "300mm Insulation (0.12)", "value": 0.12 },
+		{
+			"name": "Current Building Regulations - New Build (0.2)",
+			"value": 0.2
+		},
+		{ "name": "Building Regulations 2006 (0.25)", "value": 0.25 },
+		{ "name": "U-Value = 0.1", "value": 0.1 },
+		{ "name": "U-Value = 0.075", "value": 0.075 },
+		{
+			"name": "Intermediate Floor Timber with insulation (0.32)",
+			"value": 0.32
+		},
+		{
+			"name": "Intermediate Floor Timber without insulation (1.73)",
+			"value": 1.73
+		},
+		{ "name": "Party Floor Concrete with insulation (0.57)", "value": 0.57 },
+		{ "name": "Party Floor Concrete without insulation (1.82)", "value": 1.82 },
+		{ "name": "Custom Entry", "value": "" }
+	],
+	"number_external_walls": [1, 2, 3, 4],
+	"star_rating_cop": [
+		{ "peak_flow_temp (ºC)": 35, "COP": 3.6, "star_rating": 6 },
+		{ "peak_flow_temp (ºC)": 40, "COP": 3.4, "star_rating": 5 },
+		{ "peak_flow_temp (ºC)": 45, "COP": 3, "star_rating": 4 },
+		{ "peak_flow_temp (ºC)": 50, "COP": 2.7, "star_rating": 3 },
+		{ "peak_flow_temp (ºC)": 55, "COP": 2.4, "star_rating": 2 },
+		{ "peak_flow_temp (ºC)": 60, "COP": 2.1, "star_rating": 1 }
+	],
+	"rad_adjustment_factors_for_flow_temp": [
+		{ "DT": "", "factor": "" },
+		{
+			"DT": "0",
+			"factor": "0.000"
+		},
+		{
+			"DT": "1",
+			"factor": "0.010"
+		},
+		{
+			"DT": "2",
+			"factor": "0.020"
+		},
+		{
+			"DT": "3",
+			"factor": "0.030"
+		},
+		{
+			"DT": "4",
+			"factor": "0.040"
+		},
+		{
+			"DT": "5",
+			"factor": "0.050"
+		},
+		{
+			"DT": "6",
+			"factor": "0.065"
+		},
+		{
+			"DT": "7",
+			"factor": "0.079"
+		},
+		{
+			"DT": "8",
+			"factor": "0.094"
+		},
+		{
+			"DT": "9",
+			"factor": "0.108"
+		},
+		{
+			"DT": "10",
+			"factor": "0.123"
+		},
+		{
+			"DT": "11",
+			"factor": "0.140"
+		},
+		{
+			"DT": "12",
+			"factor": "0.157"
+		},
+		{
+			"DT": "13",
+			"factor": "0.175"
+		},
+		{
+			"DT": "14",
+			"factor": "0.192"
+		},
+		{
+			"DT": "15",
+			"factor": "0.209"
+		},
+		{
+			"DT": "16",
+			"factor": "0.228"
+		},
+		{
+			"DT": "17",
+			"factor": "0.247"
+		},
+		{
+			"DT": "18",
+			"factor": "0.266"
+		},
+		{
+			"DT": "19",
+			"factor": "0.285"
+		},
+		{
+			"DT": "20",
+			"factor": "0.304"
+		},
+		{
+			"DT": "21",
+			"factor": "0.324"
+		},
+		{
+			"DT": "22",
+			"factor": "0.345"
+		},
+		{
+			"DT": "23",
+			"factor": "0.365"
+		},
+		{
+			"DT": "24",
+			"factor": "0.386"
+		},
+		{
+			"DT": "25",
+			"factor": "0.406"
+		},
+		{
+			"DT": "26",
+			"factor": "0.428"
+		},
+		{
+			"DT": "27",
+			"factor": "0.450"
+		},
+		{
+			"DT": "28",
+			"factor": "0.471"
+		},
+		{
+			"DT": "29",
+			"factor": "0.493"
+		},
+		{
+			"DT": "30",
+			"factor": "0.515"
+		},
+		{
+			"DT": "31",
+			"factor": "0.538"
+		},
+		{
+			"DT": "32",
+			"factor": "0.561"
+		},
+		{
+			"DT": "33",
+			"factor": "0.583"
+		},
+		{
+			"DT": "34",
+			"factor": "0.606"
+		},
+		{
+			"DT": "35",
+			"factor": "0.629"
+		},
+		{
+			"DT": "36",
+			"factor": "0.653"
+		},
+		{
+			"DT": "37",
+			"factor": "0.677"
+		},
+		{
+			"DT": "38",
+			"factor": "0.700"
+		},
+		{
+			"DT": "39",
+			"factor": "0.724"
+		},
+		{
+			"DT": "40",
+			"factor": "0.748"
+		},
+		{
+			"DT": "41",
+			"factor": "0.773"
+		},
+		{
+			"DT": "42",
+			"factor": "0.798"
+		},
+		{
+			"DT": "43",
+			"factor": "0.822"
+		},
+		{
+			"DT": "44",
+			"factor": "0.847"
+		},
+		{
+			"DT": "45",
+			"factor": "0.872"
+		},
+		{
+			"DT": "46",
+			"factor": "0.898"
+		},
+		{
+			"DT": "47",
+			"factor": "0.923"
+		},
+		{
+			"DT": "48",
+			"factor": "0.949"
+		},
+		{
+			"DT": "49",
+			"factor": "0.974"
+		},
+		{
+			"DT": "50",
+			"factor": "1"
+		}
+	],
+	"air_change_rates_for_rooms_with_open_fires": [
+		{
+			"approximate_room_size(m3)": 40,
+			"throat_restrictor": "no",
+			"air_changes_per_hour": 5
+		},
+		{
+			"approximate_room_size(m3)": 40,
+			"throat_restrictor": "yes",
+			"air_changes_per_hour": 3
+		},
+		{
+			"approximate_room_size(m3)": 70,
+			"throat_restrictor": "no",
+			"air_changes_per_hour": 4
+		},
+		{
+			"approximate_room_size(m3)": 70,
+			"throat_restrictor": "yes",
+			"air_changes_per_hour": 2
+		}
+	],
+	"regions": {
+		"low_weeks": [
+			{
+				"region": "Thames Valley (Heathrow)",
+				"value": 1931,
+				"ground_temp": 11
+			},
+			{ "region": "South-eastern (Gatwick)", "value": 2142, "ground_temp": 10 },
+			{ "region": "Southern (Hurn)", "value": 2113, "ground_temp": 10 },
+			{
+				"region": "South-western (Plymouth)",
+				"value": 1765,
+				"ground_temp": 11
+			},
+			{ "region": "Severn Valley (Filton)", "value": 1743, "ground_temp": 10 },
+			{ "region": "Midland (Elmdon)", "value": 2304, "ground_temp": 10 },
+			{ "region": "W Pennines (Ringway)", "value": 2117, "ground_temp": 10 },
+			{ "region": "North-western (Carlisle)", "value": 2269, "ground_temp": 9 },
+			{ "region": "Borders (Boulmer)", "value": 2359, "ground_temp": 9 },
+			{ "region": "North-eastern (Lemming)", "value": 2252, "ground_temp": 9 },
+			{ "region": "E Pennines (Finningley)", "value": 2192, "ground_temp": 10 },
+			{ "region": "E Anglia (Honington)", "value": 2141, "ground_temp": 10 },
+			{ "region": "W Scotland (Abbotsinch)", "value": 2369, "ground_temp": 9 },
+			{ "region": "E Scotland (Leuchars)", "value": 2448, "ground_temp": 9 },
+			{ "region": "NE Scotland (Dyce)", "value": 2535, "ground_temp": 8 },
+			{ "region": "Wales (Aberporth)", "value": 2053, "ground_temp": 10 },
+			{ "region": "N Ireland (Aldergrove)", "value": 2242, "ground_temp": 9 },
+			{ "region": "NW Scotland (Stornoway)", "value": 2537, "ground_temp": 8 },
+			{ "region": "Custom Entry", "value": "", "ground_temp": "" }
+		],
+		"high_weeks": [
+			{
+				"region": "Thames Valley (Heathrow)",
+				"value": 2033,
+				"ground_temp": 11
+			},
+			{ "region": "South-eastern (Gatwick)", "value": 2255, "ground_temp": 10 },
+			{ "region": "Southern (Hurn)", "value": 2224, "ground_temp": 10 },
+			{
+				"region": "South-western (Plymouth)",
+				"value": 1858,
+				"ground_temp": 11
+			},
+			{ "region": "Severn Valley (Filton)", "value": 1835, "ground_temp": 10 },
+			{ "region": "Midland (Elmdon)", "value": 2425, "ground_temp": 10 },
+			{ "region": "W Pennines (Ringway)", "value": 2228, "ground_temp": 10 },
+			{ "region": "North-western (Carlisle)", "value": 2388, "ground_temp": 9 },
+			{ "region": "Borders (Boulmer)", "value": 2483, "ground_temp": 9 },
+			{ "region": "North-eastern (Lemming)", "value": 2370, "ground_temp": 9 },
+			{ "region": "E Pennines (Finningley)", "value": 2307, "ground_temp": 10 },
+			{ "region": "E Anglia (Honington)", "value": 2254, "ground_temp": 10 },
+			{ "region": "W Scotland (Abbotsinch)", "value": 2494, "ground_temp": 9 },
+			{ "region": "E Scotland (Leuchars)", "value": 2577, "ground_temp": 9 },
+			{ "region": "NE Scotland (Dyce)", "value": 2668, "ground_temp": 8 },
+			{ "region": "Wales (Aberporth)", "value": 2161, "ground_temp": 10 },
+			{ "region": "N Ireland (Aldergrove)", "value": 2360, "ground_temp": 9 },
+			{ "region": "NW Scotland (Stornoway)", "value": 2671, "ground_temp": 8 },
+			{ "region": "Custom Entry", "value": "1990", "ground_temp": "" }
+		]
+	},
+	"locations": [
+		{ "location": "Belfast", "value": -1.2 },
+		{ "location": "Birmingham", "value": -3.4 },
+		{ "location": "Cardiff", "value": -1.6 },
+		{ "location": "Edinburgh", "value": -3.4 },
+		{ "location": "Glasgow", "value": -3.9 },
+		{ "location": "London", "value": -1.8 },
+		{ "location": "Manchester", "value": -2.2 },
+		{ "location": "Plymouth", "value": -0.2 }
+	],
+	"propertyType": [
+		"Detached",
+		"Semi-Detached",
+		"Terraced",
+		"Flat (only one ext wall)"
+	],
+	"type_of_use": [
+		{ "name": "B & B", "value": 2.91, "hwd": 45 },
+		{ "name": "Factories (no process)", "value": 1.42, "hwd": 22},
+		{ "name": "Hotels", "value": 3.88, "hwd": 60 },
+		{ "name": "Offices", "value": 1.42, "hwd": 22 },
+		{ "name": "Schools (Boarding)", "value": 3.23, "hwd": 50 },
+		{ "name": "Schools (Day)", "value": 0.97, "hwd": 15 }
+	]
+}

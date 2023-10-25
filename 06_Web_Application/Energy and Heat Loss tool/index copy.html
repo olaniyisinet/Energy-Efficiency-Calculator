@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danske Bank Home Energy Check | Where do you live?</title>
+    <link href="../Content/css2740.css?v=5o34EVicG5NjHtXyPIQrqqKBRkP0PkO1pVRbn9Sy0wo1" rel="stylesheet">
+
+    
+    <script src="../bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <script src="../bundles/jquery?v=6hhAdW9qE0LSDOfE5k6WrzzxGfE7OI88H8m7VEWj1hc1"></script>
+
+    <script src="../bundles/jqueryval?v=hrIIuiS2W7smHeDW1Ey9ft96tZj6tivqrH6LRe_LdZE1"></script>
+
+    <script src="../bundles/sitejs?v=xoEsytQjR_d-QJk_7KSFViDxJqgzXIwDPhw9vz7YxgA1"></script>
+
+    <script src="../bundles/bootstrap?v=ESck_wvaWCiF5JsitLMh765lhMnw7BVBtZE-YUTa4Ns1"></script>
+
+
+    
+    <link rel="apple-touch-icon-precomposed" href="../Content/Icons/HEC-Demo-114x114.png">
+    <link rel="apple-touch-icon-precomposed" href="../Content/Icons/HEC-Demo-57x57.png">
+</head>
+<body id="hec-main-wrapper">
+
+    <!-- Header -->
+    <header id="siteHeader" class="db-site-header">
+        <div class="container">
+            <div class="db-site-header-content">
+                <img src="../Content/Images/logos/danske-bank-logo.svg">
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+    <!-- Main -->
+    <main id="hec-content-wrapper">
+
+        <div class="container">
+            <div id="ieWarning" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <p><i class="glyphicon glyphicon glyphicon-warning-sign"></i>It looks like you're using an outdated browser.  Please close this session and relaunch this tool in a browser that is still supported, such as Chrome, Edge, Firefox or Opera.</p>
+            </div>
+        </div>
+
+
+        <div id="hec-content">
+            <span id="main" tabindex="-1"></span>
+            <section class="hec-content-image">
+
+            </section>
+            <section class="hec-content">
+                <div class="container">
+                    <h1>Danske Bank Home Energy Check</h1>
+                    
+
+
+<div class="hec-where-do-you-live">
+
+    <div class="page-heading">
+        <div class="header">
+            <h2>Where do you live?</h2>
+        </div>
+    </div>
+
+    <div id="StepProgress" class="stage-progress"><div class="stage-progress-track" aria-hidden="true"><div class="stage-progress-track-complete" style="width: 0%;"></div><div class="stage stage-active" style="left:0%"><span class="stage-num">1</span></div><div class="stage" style="left:50%"><span class="stage-num">2</span></div><div class="stage" style="left:100%"><span class="stage-num">3</span></div></div><p class="sr-only">Stage 1 of 3</p></div>
+
+
+    <p> Required fields are marked with an asterisk (*).</p>
+
+<form action="/WhereDoYouLive/SaveHEC" id="frmWhereDoYouLive" method="post" name="frmWhereDoYouLive" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="IEZwYPxb48YSk6pUdWrWoIk7livQIqSPCGg1iNpa-REf0X-7PDQG5Y5Fr3AUwC2V8wQjItEENwndt4PONcaZx0zvYL2e23kLy3QoEqOC1mM1">        <section class="form-card mb-4">
+            <div class="form-card-header">
+                <h3>What's your postcode? *</h3>
+                <span class="sr-only sr-only-focusable">After you have successfully entered your postcode, you will be automatically moved to the input for your house number or name.</span>
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#modHelpMeChoose_Postcode" role="button" class="help-prompt" aria-label="Why do you need my postcode?">Why do you need this?</a>
+            </div>
+            <div class="form-card-body">
+                <div class="form-group form-group-lg">
+                    <label for="Postcode" class="sr-only">Please enter your postcode *</label>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-3">
+                            <input autocomplete="off" class="form-control form-control-lg valid" data-val="true" data-val-required="Please enter your postcode" id="Postcode" maxlength="10" name="Postcode" type="text" value="" aria-describedby="Postcode-error" aria-invalid="false">
+                        </div>
+                    </div>
+                    <span id="Postcode-error" class="field-validation-error" data-valmsg-for="RetrievalCode" data-valmsg-replace="true" style="display:none;">Please enter a valid postcode and try again.</span>
+                    <input id="PostcodeOutCode" name="PostcodeOutCode" type="hidden" value="ST5">
+                </div>
+                <div class="alert alert-info mb-0">
+                    <p>We will only use the details you give us to estimate your energy use and help us improve this tool.</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="conPropertyType" style="">
+            <div class="form-card mb-4">
+                <div class="form-card-header">
+                    <h2 id="hPropertyType">What type of property do you live in? *</h2>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#modHelpMeChoose_PropertyType" role="button" class="help-prompt" aria-label="Help me choose the type of property I live in.">Help me choose</a>
+                </div>
+                <div class="form-card-body">
+                    <label for="img-selector-ccPropertyType" class="sr-only">What type of property do you live in? *</label>
+                    <div id="ccPropertyType" class="image-selector has-item-selected image-selector-minimised" tabindex="0" data-value="101" data-text="Flat: Top floor"><div class="items" aria-hidden="true"><div class="items-slide" aria-hidden="true" style="width: 1386px; left: 463.2px;"><div class="item is-selected is-viewed" data-value="101" data-item="0"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_101.svg)"></div><div class="item-image-text">Flat: Top floor</div><div class="item-image-shadow"></div></div><div class="item is-viewed-next" data-value="102" data-item="1"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_102.svg)"></div><div class="item-image-text">Flat: Mid floor</div><div class="item-image-shadow"></div></div><div class="item" data-value="103" data-item="2"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_103.svg)"></div><div class="item-image-text">Flat: Ground floor</div><div class="item-image-shadow"></div></div><div class="item" data-value="104" data-item="3"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_104.svg)"></div><div class="item-image-text">House: Detached</div><div class="item-image-shadow"></div></div><div class="item" data-value="105" data-item="4"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_105.svg)"></div><div class="item-image-text">House: Semi-detached</div><div class="item-image-shadow"></div></div><div class="item" data-value="106" data-item="5"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_106.svg)"></div><div class="item-image-text">House: Mid terraced</div><div class="item-image-shadow"></div></div><div class="item" data-value="107" data-item="6"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_107.svg)"></div><div class="item-image-text">House: End terraced</div><div class="item-image-shadow"></div></div><div class="item" data-value="108" data-item="7"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_108.svg)"></div><div class="item-image-text">Bungalow: Attached</div><div class="item-image-shadow"></div></div><div class="item" data-value="109" data-item="8"><div class="item-image" style="background-image: url(../Content/images/icon/property-type/icon_109.svg)"></div><div class="item-image-text">Bungalow: Detached</div><div class="item-image-shadow"></div></div></div></div><div class="item-selected" aria-hidden="true">Flat: Top floor</div><div class="items-nav" aria-hidden="true"><div class="item-indicators-wrapper"><div class="item-indicator is-viewed"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div><div class="item-indicator"></div></div><button type="button" class="item-prev" tabindex="-1"></button><button type="button" class="item-next" tabindex="-1"></button></div><label for="is_accessible_ccPropertyType" class="sr-only sr-only-focusable">hPropertyType</label><select id="is_accessible_ccPropertyType" data-image-selector="ccPropertyType" class="sr-only sr-only-focusable"><option value="101">Flat: Top floor</option><option value="102">Flat: Mid floor</option><option value="103">Flat: Ground floor</option><option value="104">House: Detached</option><option value="105">House: Semi-detached</option><option value="106">House: Mid terraced</option><option value="107">House: End terraced</option><option value="108">Bungalow: Attached</option><option value="109">Bungalow: Detached</option></select></div>
+                    <input data-val="true" data-val-number="The field PropertyTypeID must be a number." id="PropertyTypeID" name="PropertyTypeID" type="hidden" value="101">
+                </div>
+            </div>
+        </section>
+        <section id="conPropertyAge" style="">
+            <div class="form-card mb-4">
+                <div class="form-card-header">
+                    <h2 id="hAge">When was your home built? *</h2>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#modHelpMeChoose_PropertyAge" role="button" class="help-prompt" aria-label="Help me choose when my home was built.">Help me choose</a>
+                </div>
+                <div class="form-card-body px-4">
+                    <label for="item-selector-ccPropertyAge" class="sr-only">When was your home built? *</label>
+                    <div id="ccPropertyAge" class="item-selector" tabindex="0"><div class="item-selector-collapsed" aria-hidden="true"><span class="item-text">before 1900</span><button type="button" class="item-prev" tabindex="-1" disabled=""></button><button type="button" class="item-next" tabindex="-1"></button></div><div class="item-selector-expanded" aria-hidden="true"><div class="item-selector-track-wrapper" aria-hidden="true"><div class="item-selector-track" aria-hidden="true"><div class="item-selector-handle" aria-hidden="true" style="left: 0%;"></div><div class="track-point" style="left:0%" data-value="201" data-item="0" aria-hidden="true"></div><div class="track-point" style="left:9.090909090909092%" data-value="202" data-item="1" aria-hidden="true"></div><div class="track-point" style="left:18.181818181818183%" data-value="203" data-item="2" aria-hidden="true"></div><div class="track-point" style="left:27.272727272727273%" data-value="204" data-item="3" aria-hidden="true"></div><div class="track-point" style="left:36.36363636363637%" data-value="205" data-item="4" aria-hidden="true"></div><div class="track-point" style="left:45.45454545454546%" data-value="206" data-item="5" aria-hidden="true"></div><div class="track-point" style="left:54.54545454545455%" data-value="207" data-item="6" aria-hidden="true"></div><div class="track-point" style="left:63.63636363636364%" data-value="208" data-item="7" aria-hidden="true"></div><div class="track-point" style="left:72.72727272727273%" data-value="209" data-item="8" aria-hidden="true"></div><div class="track-point" style="left:81.81818181818183%" data-value="210" data-item="9" aria-hidden="true"></div><div class="track-point" style="left:90.90909090909092%" data-value="211" data-item="10" aria-hidden="true"></div><div class="track-point" style="left:100.00000000000001%" data-value="212" data-item="11" aria-hidden="true"></div></div></div><div class="item-selector-items-wrapper" aria-hidden="true"><div class="item-selector-items" aria-hidden="true"><div class="tick" style="left:0%" aria-hidden="true"></div><span class="item-label is-selected" style="left:0%" data-item="0" aria-hidden="true">before 1900</span><div class="tick" style="left:9.090909090909092%" aria-hidden="true"></div><span class="item-label" style="left:9.090909090909092%" data-item="1" aria-hidden="true">1900-1929</span><div class="tick" style="left:18.181818181818183%" aria-hidden="true"></div><span class="item-label" style="left:18.181818181818183%" data-item="2" aria-hidden="true">1930-1949</span><div class="tick" style="left:27.272727272727273%" aria-hidden="true"></div><span class="item-label" style="left:27.272727272727273%" data-item="3" aria-hidden="true">1950-1966</span><div class="tick" style="left:36.36363636363637%" aria-hidden="true"></div><span class="item-label" style="left:36.36363636363637%" data-item="4" aria-hidden="true">1967-1975</span><div class="tick" style="left:45.45454545454546%" aria-hidden="true"></div><span class="item-label" style="left:45.45454545454546%" data-item="5" aria-hidden="true">1976-1982</span><div class="tick" style="left:54.54545454545455%" aria-hidden="true"></div><span class="item-label" style="left:54.54545454545455%" data-item="6" aria-hidden="true">1983-1990</span><div class="tick" style="left:63.63636363636364%" aria-hidden="true"></div><span class="item-label" style="left:63.63636363636364%" data-item="7" aria-hidden="true">1991-1995</span><div class="tick" style="left:72.72727272727273%" aria-hidden="true"></div><span class="item-label" style="left:72.72727272727273%" data-item="8" aria-hidden="true">1996-2002</span><div class="tick" style="left:81.81818181818183%" aria-hidden="true"></div><span class="item-label" style="left:81.81818181818183%" data-item="9" aria-hidden="true">2003-2006</span><div class="tick" style="left:90.90909090909092%" aria-hidden="true"></div><span class="item-label" style="left:90.90909090909092%" data-item="10" aria-hidden="true">2007-2011</span><div class="tick" style="left:100.00000000000001%" aria-hidden="true"></div><span class="item-label" style="left:100.00000000000001%" data-item="11" aria-hidden="true">2012 onwards</span></div></div></div></div>
+                    <input data-val="true" data-val-number="The field PropertyAgeID must be a number." data-val-required="Please select the age of your property" id="PropertyAgeID" name="PropertyAgeID" type="hidden" value="201">
+                <select id="item-selector-ccPropertyAge" data-item-selector="ccPropertyAge" class="sr-only sr-only-focusable" tabindex="-1" aria-labelledby="hAge"><option value="201">before 1900</option><option value="202">1900-1929</option><option value="203">1930-1949</option><option value="204">1950-1966</option><option value="205">1967-1975</option><option value="206">1976-1982</option><option value="207">1983-1990</option><option value="208">1991-1995</option><option value="209">1996-2002</option><option value="210">2003-2006</option><option value="211">2007-2011</option><option value="212">2012 onwards</option></select></div>
+            </div>
+        </section>
+        <section id="conBedrooms" style="">
+            <div class="form-card mb-4">
+                <div class="form-card-header">
+                    <h2 id="hBedrooms">How many bedrooms does your home have? *</h2>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#modHelpMeChoose_Bedrooms" role="button" class="help-prompt" aria-label="Help me choose how many bedrooms my home has.">Help me choose</a>
+                </div>
+                <div class="form-card-body px-4">
+                    <label for="item-selector-ccBedrooms" class="sr-only">How many bedrooms does your home have? *</label>
+                    <div id="ccBedrooms" class="item-selector" tabindex="0"><div class="item-selector-collapsed" aria-hidden="true"><span class="item-text">1 bedroom</span><button type="button" class="item-prev" tabindex="-1" disabled=""></button><button type="button" class="item-next" tabindex="-1"></button></div><div class="item-selector-expanded" aria-hidden="true"><div class="item-selector-track-wrapper" aria-hidden="true"><div class="item-selector-track" aria-hidden="true"><div class="item-selector-handle" aria-hidden="true" style="left: 0%;"></div><div class="track-point" style="left:0%" data-value="1" data-item="0" aria-hidden="true"></div><div class="track-point" style="left:50%" data-value="2" data-item="1" aria-hidden="true"></div><div class="track-point" style="left:100%" data-value="3" data-item="2" aria-hidden="true"></div></div></div><div class="item-selector-items-wrapper" aria-hidden="true"><div class="item-selector-items" aria-hidden="true"><div class="tick" style="left:0%" aria-hidden="true"></div><span class="item-label is-selected" style="left:0%" data-item="0" aria-hidden="true">1 bedroom</span><div class="tick" style="left:50%" aria-hidden="true"></div><span class="item-label" style="left:50%" data-item="1" aria-hidden="true">2 bedrooms</span><div class="tick" style="left:100%" aria-hidden="true"></div><span class="item-label" style="left:100%" data-item="2" aria-hidden="true">3 or more bedrooms</span></div></div></div></div>
+                    <input data-val="true" data-val-number="The field Bedrooms must be a number." data-val-required="Please select how many bedrooms you have" id="Bedrooms" name="Bedrooms" type="hidden" value="1">
+                <select id="item-selector-ccBedrooms" data-item-selector="ccBedrooms" class="sr-only sr-only-focusable" tabindex="-1" aria-labelledby="hBedrooms"><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3 or more bedrooms</option></select></div>
+            </div>
+        </section>
+        <div id="conButtons" style="" class="clearfix">            
+            <a class="btn btn-secondary btn-sm-block" href="/">Back</a>
+            <button type="submit" class="btn btn-primary btn-sm-block float-right">Next</button>
+        </div>
+</form></div>
+
+
+<div class="modal" id="modHelpMeChoose_Postcode" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="conHelpMeChoose_Postcode">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Why do you need my postcode?</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="conHelpMeChoose_Postcode" class="modal-body modal-help-options">
+                <p>We ask this so that we can work out the average temperatures in your area.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modHelpMeChoose_PropertyType" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="conHelpMeChoose_PropertyType">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 id="h2PropertyType" class="modal-title">Help me choose my property type</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="conHelpMeChoose_PropertyType" class="modal-body modal-help-options">
+                <p>
+                    If you don't see your property type listed, select the option closest to it. For example, if you live on the ground floor of a Victorian terraced home, select ‘Ground floor flat’.
+                </p>
+                <p>
+                    Telling us about the type of property you live in helps us work out the heat loss of your home through the walls, floors and roofs.
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modHelpMeChoose_PropertyAge" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="conHelpMeChoose_PropertyAge">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Help me choose my property's age</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="conHelpMeChoose_PropertyAge" class="modal-body modal-help-options">
+                <p>
+                    The age of your home gives us an idea of the construction methods and building materials used. You can find the year that your property was built on your Energy Performance Certificate (EPC) report, if you have one.
+                </p>
+                <p>If you live in England or Wales you can find your EPC <a href="https://www.epcregister.com/home.html" target="_blank">here</a>. If you live in Scotland you can find your EPC <a href="https://www.scottishepcregister.org.uk" target="_blank">here</a>.</p>
+
+                <p>If you don't have an EPC, you could find the details on your house deeds. If you own your home, your survey or home report may tell you the age of the building.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modHelpMeChoose_Bedrooms" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="conHelpMeChoose_PropertyAge">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 id="h2Bedrooms" class="modal-title">Help me choose how many bedrooms my home has</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="conHelpMeChoose_PropertyAge" class="modal-body modal-help-options">
+                <p>
+                    Please include all rooms in your home which were originally meant to be used as bedrooms but may be used for other purposes, such as a home office or playroom.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/bundles/hecjs_wheredoyoulive?v=CJUZ0RrEayHwtpPKvR5hJuf3_Vv_4oBsbv0Y44wi93M1"></script>
+
+
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Main end -->
+    <!-- Footer -->
+    <footer class="db-site-footer">
+        <div class="db-site-footer-content container">
+            <!-- Footer content -->
+            <p class="m-0">Copyright © 2021 Danske Bank Group</p>
+            <p class="m-0 text-muted text-small">Home Energy Check is powered by Energy Saving Trust and as such figures / estimates quoted are provided by the Energy Saving Trust</p>
+            <!-- Footer content end -->
+        </div>
+    </footer>
+    <!-- Loading modal -->
+    <div id="hec-loading" role="alert" aria-live="assertive" style="display: none;">
+        <div class="loading-modal">
+            <div class="spinner-border spinner-border-lg text-blue">
+                <span class="sr-only">Loading, please wait.</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Loading modal end -->
+    <!-- Confirmation -->
+    
+
+
+
+    <div id="hec-confirmation" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="hec-confirmation-title" style="display:none;" class="modal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <h2 id="hec-confirmation-title" class="hec-confirmation-title">Are you sure you want to....?</h2>
+                    <p class="hec-confirmation-question mb-1">Please choose an option below....</p>
+
+
+                    <div class="modal-footer clearfix">
+                        <button type="button" class="btn btn-primary float-left" id="btnOK" name="btnOK">OK</button>
+
+                        <button type="button" class="btn btn-secondary float-right" id="btnCancel" name="btnCancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Confirmation end -->
+
+
+
+</body></html>

@@ -1,0 +1,906 @@
+
+
+
+Variable: region
+p-value: 0.0
+Chi2: 65517.82722484344
+
+Node 1:
+	Count = 433464.0	Rate = 0.45513352896665005
+	['Adur', 'Gedling', 'Bassetlaw', 'Cotswold', 'Teignbridge', 'Boston', 'Thanet', 'Hastings', 'Ashfield', 'Babergh', 'Lewes', 'Waverley', 'Breckland', 'Guildford', 'Worcester', 'Fylde', 'Wealden', 'Bolsover', 'Brentwood', 'Carlisle', 'Broadland', 'Rochford', 'Dover', 'Stroud', 'Chichester']
+
+Node 2:
+	Count = 301953.0	Rate = 0.37460796878984476
+	['Allerdale', 'Rossendale', 'Craven', 'Broxtowe', 'Ryedale', 'Torridge', 'Copeland', 'Richmondshire', 'Erewash', 'Tendring', 'Worthing', 'Rother', 'Scarborough', 'Hambleton', 'Harrogate', 'Lancaster', 'Wyre', 'Melton', 'Sevenoaks', 'Maldon']
+
+Node 3:
+	Count = 364964.0	Rate = 0.5059348319286285
+	['Arun', 'Blaby', 'Sedgemoor', 'Braintree', 'Swale', 'Havant', 'Stafford', 'Canterbury', 'Cheltenham', 'Preston', 'Bromsgrove', 'Spelthorne', 'Chesterfield', 'Fenland', 'Mansfield', 'Elmbridge', 'Mendip', 'Rushcliffe', 'Tandridge', 'Gravesham']
+
+Node 4:
+	Count = 318629.0	Rate = 0.6350520511315668
+	['Ashford', 'Cherwell', 'Watford', 'Rugby', 'Colchester', 'Exeter', 'Maidstone', 'Stevenage', 'Harlow', 'Tewkesbury', 'Rushmoor', 'Norwich', 'Cambridge', 'Hart', 'Crawley', 'Dartford', 'Eastleigh']
+
+Node 5:
+	Count = 438433.0	Rate = 0.5589748034477332
+	['Basildon', 'Woking', 'Huntingdonshire', 'Uttlesford', 'Chorley', 'Chelmsford', 'Hertsmere', 'Fareham', 'Gosport', 'Gloucester', 'Harborough', 'Broxbourne', 'Redditch', 'Selby', 'Runnymede', 'Charnwood', 'Warwick', 'Eastbourne', 'Lichfield', 'Lincoln', 'Dacorum', 'Horsham', 'Wychavon', 'Oxford', 'Tamworth']
+
+Node 6:
+	Count = 55391.0	Rate = 0.251882074705277
+	['Burnley', 'Hyndburn', 'Eden', 'Pendle']
+
+
+
+Variable: PROPERTY_TYPE
+p-value: 0.0
+Chi2: 218700.9676578921
+
+Node 1:
+	Count = 175429.0	Rate = 0.19924869890383004
+	['Bungalow', 'Park home']
+
+Node 2:
+	Count = 517277.0	Rate = 0.7551137978297895
+	['Flat']
+
+Node 3:
+	Count = 1220128.0	Rate = 0.4350854992263107
+	['House', 'Maisonette']
+
+
+
+Variable: BUILT_FORM
+p-value: 0.0
+Chi2: 74408.08267605692
+
+Node 1:
+	Count = 81088.0	Rate = 0.8855687647987371
+	['<missing>', 'Enclosed Mid-Terrace']
+
+Node 2:
+	Count = 671840.0	Rate = 0.5456358656823053
+	['End-Terrace', 'Mid-Terrace']
+
+Node 3:
+	Count = 29889.0	Rate = 0.6567633577570343
+	['Enclosed End-Terrace']
+
+Node 4:
+	Count = 539547.0	Rate = 0.41933510889690795
+	['Semi-Detached']
+
+Node 5:
+	Count = 590470.0	Rate = 0.4608989449082934
+	['Detached']
+
+
+
+Variable: COUNTY
+p-value: 0.0
+Chi2: 28414.48117652582
+
+Node 1:
+	Count = 318515.0	Rate = 0.5895201167919878
+	['<missing>', 'Hampshire', 'Hertfordshire', 'Warwickshire', 'Cambridgeshire', 'Oxfordshire']
+
+Node 2:
+	Count = 1037337.0	Rate = 0.5170875038680776
+	['Staffordshire', 'Essex', 'Kent', 'Leicestershire', 'Norfolk', 'Gloucestershire', 'Worcestershire', 'Somerset', 'Surrey', 'Lincolnshire', 'West Sussex', 'Devon']
+
+Node 3:
+	Count = 250574.0	Rate = 0.4469697574369248
+	['East Sussex', 'Suffolk', 'Nottinghamshire', 'Derbyshire']
+
+Node 4:
+	Count = 306408.0	Rate = 0.3924603796245529
+	['Cumbria', 'Lancashire', 'North Yorkshire']
+
+
+
+Variable: TRANSACTION_TYPE
+p-value: 0.0
+Chi2: 752867.6014206852
+
+Node 1:
+	Count = 272109.0	Rate = 0.3793259318875892
+	['<missing>', 'not sale or rental', 'rental (private)', 'following green deal', 'RHI application', 'not recorded']
+
+Node 2:
+	Count = 763273.0	Rate = 0.27758613235369256
+	['marketed sale', 'non marketed sale']
+
+Node 3:
+	Count = 438996.0	Rate = 0.9881730129659496
+	['new dwelling']
+
+Node 4:
+	Count = 104770.0	Rate = 0.6527822850052496
+	['FiT application', 'Stock Condition Survey', 'rental']
+
+Node 5:
+	Count = 105281.0	Rate = 0.07633856061397593
+	['assessment for green deal', 'ECO assessment']
+
+Node 6:
+	Count = 150022.0	Rate = 0.7839916812200877
+	['Stock condition survey', 'rental (social)']
+
+Node 7:
+	Count = 78383.0	Rate = 0.17192503476519144
+	['none of the above']
+
+
+
+Variable: ENERGY_TARIFF
+p-value: 0.0
+Chi2: 557530.6204282687
+
+Node 1:
+	Count = 164234.0	Rate = 0.4347638126088386
+	['<missing>', 'off-peak 18 hour']
+
+Node 2:
+	Count = 452564.0	Rate = 0.9718669624627677
+	['standard tariff', '24 hour', '5']
+
+Node 3:
+	Count = 945082.0	Rate = 0.3488670824330587
+	['dual (24 hour)', 'Single']
+
+Node 4:
+	Count = 51278.0	Rate = 0.6469831116658216
+	['off-peak 7 hour', 'off-peak 10 hour']
+
+Node 5:
+	Count = 299676.0	Rate = 0.2746232597872369
+	['dual']
+
+
+
+Variable: MAINS_GAS_FLAG
+p-value: 0.0
+Chi2: 578658.4707380497
+
+Node 1:
+	Count = 450678.0	Rate = 0.9820603623873364
+	['<missing>']
+
+Node 2:
+	Count = 408650.0	Rate = 0.23524287287409765
+	['N']
+
+Node 3:
+	Count = 1053506.0	Rate = 0.39647804568744743
+	['Y']
+
+
+
+Variable: FLOOR_LEVEL
+p-value: 0.0
+Chi2: 211452.3086456073
+
+Node 1:
+	Count = 1359135.0	Rate = 0.4025913540597512
+	['<missing>', '-1', '15th', '14.0', '20+', '11.0', '15', '0', '-1.0', '16th', '18th', '18.0', '17th', 'Basement']
+
+Node 2:
+	Count = 71844.0	Rate = 0.7717554701854017
+	['19', '08', '10', '5.0', '11', '06', '07', '05', '8.0', '04', '7.0', '6.0', '03', '1.0', '9.0', '6th', '13th', '9th', '0.0', '4.0', '13', '02', '01', '12.0', '2.0', '3.0']
+
+Node 3:
+	Count = 116600.0	Rate = 0.9654545454545455
+	['16.0', '12', '19.0', '20', '17', '16', '2', 'mid floor', '3', 'top floor', '1', 'ground floor']
+
+Node 4:
+	Count = 365255.0	Rate = 0.6604235397188266
+	['7th', '4th', '12th', '11th', '21st or above', '18', '10th', '14th', 'Ground', '10.0', '09', '8th', '00', '15.0', '14', '13.0', '5th', '1st', '3rd', '2nd']
+
+
+
+Variable: MAIN_HEATING_CONTROLS
+p-value: 0.0
+Chi2: 153677.75721213946
+
+Node 1:
+	Count = 1647159.0	Rate = 0.5505716205903619
+	['<missing>', '2705', '2109', '2106.0', '2106', '2706', '2208.0', '2706.0', '2110.0', '2205.0', '2506.0', '2301', '2110', '2207.0', '2307', '2205', '2506', '2302.0']
+
+Node 2:
+	Count = 142548.0	Rate = 0.13244661447372114
+	['2104', '2107', '2107.0', '2604.0', '2201.0', '2602', '2103', '2604', '2104.0', '2103.0', '2701.0', '2502.0', '2504', '2504.0', '2605', '2602.0', '2111.0', '2503.0', '2111']
+
+Node 3:
+	Count = 47149.0	Rate = 0.016225158539947826
+	['2201', '4.0', '2702', '2505', '2501', '2701', '0.0', '2308', '2100', '2699.0', '2601.0', '2101.0', '2501.0', '2601', '%%mainheatcontrol%%', '2100.0', '2101', '2699', '2102', '2102.0']
+
+Node 4:
+	Count = 10104.0	Rate = 0.9051860649247823
+	['2308.0', '2303.0', '2303', '2311.0', '2305.0', '2306.0', '2305', '2310.0', '2306', '2311', '2202', '2310', '1.0', '2312', '2208', '2112.0', '2108.0', '2403.0', '2312.0', '2207', '2301.0', '2307.0', '2309', '2309.0', '2304', '2304.0']
+
+Node 5:
+	Count = 65874.0	Rate = 0.3149497525579136
+	['2702.0', '2603', '2502', '2202.0', '2503', '2703.0', '2703', '2401', '2204', '2401.0', '2605.0', '2505.0', '2603.0', '2402.0', '2404', '2705.0', '2109.0', '2402', '2404.0', '2206', '17.0', '2302', '2203.0', '2204.0', '2203', '2105', '2704', '2105.0', '2206.0', '2704.0']
+
+
+
+Variable: GLAZED_TYPE
+p-value: 0.0
+Chi2: 521908.64147276524
+
+Node 1:
+	Count = 567564.0	Rate = 0.8172399940799628
+	['<missing>', 'double, known data', 'triple, known data']
+
+Node 2:
+	Count = 828355.0	Rate = 0.23243174725812002
+	['double glazing installed before 2002', 'double glazing, unknown install date']
+
+Node 3:
+	Count = 477015.0	Rate = 0.6220768738928545
+	['double glazing installed during or after 2002', 'triple glazing']
+
+Node 4:
+	Count = 39900.0	Rate = 0.08283208020050126
+	['secondary glazing', 'single glazing']
+
+
+
+Variable: HOTWATER_DESCRIPTION
+p-value: 0.0
+Chi2: 347075.431740206
+
+Node 1:
+	Count = 73867.0	Rate = 0.9653160409925948
+	['<missing>', 'Community scheme, waste water heat recovery', 'Community scheme, plus solar', 'From main system |From main system', 'No system present: electric immersion assumed, waste water heat recovery', 'From secondary system, flue gas heat recovery', 'From main system, flue gas heat recovery, waste water heat recovery', 'Gas instantaneous at point of use, flue gas heat recovery', 'From main system, no cylinderstat, flue gas heat recovery, plus solar', 'From hot-water only Community scheme - boilers, waste water heat recovery', 'Electric heat pump for water heating only, flue gas heat recovery', 'From hot-water only Community scheme - heat pump, plus solar', 'From main system, flue gas heat recovery, plus solar', 'Heat pump, plus solar', 'From main system, waste water heat recovery, flue gas heat recovery', 'Electric immersion, off-peak, waste water heat recovery', 'From main system, flue gas heat recovery, no cylinderstat', 'From main system, no cylinderstat, waste water heat recovery', 'From community heat pump', 'From main system, waste water heat recovery, no cylinderstat', 'From main system, plus solar, waste water heat recovery', 'Community scheme with CHP', 'Electric heat pump, plus solar', 'Community scheme, flue gas heat recovery', 'Electric immersion, standard tariff, flue gas heat recovery, plus solar', 'Electric instantaneous at point of use, waste water heat recovery', 'Community scheme, no cylinderstat, plus solar', 'Electric instantaneous at point of use, flue gas heat recovery', 'Gas boiler/circulator, flue gas heat recovery', 'Gas boiler/circulator for water heating only, plus solar', 'From main system, waste water heat recovery', 'From main system, flue gas heat recovery', 'Community scheme', 'Heat pump']
+
+Node 2:
+	Count = 198901.0	Rate = 0.03483642616175887
+	['No system present: electric immersion assumed, no cylinderstat', 'Gas instantaneous at point of use, no cylinderstat', 'Electric immersion, standard tariff, flue gas heat recovery, waste water heat recovery', 'Solid fuel range cooker, no cylinderstat, plus solar', 'From main system, no cylinderstat, flue gas heat recovery', 'Oil boiler/circulator, no cylinderstat, plus solar', 'From main heating system', ', no cylinderstat', ', no cylinderstat, plus solar', 'Gas range cooker, no cylinderstat', 'Electric heat pump for water heating only, no cylinderstat, plus solar', 'Gas range cooker', 'underfloor heating, standard tariff', 'Solid fuel boiler/circulator |Bwyler/cylchredydd tanwydd solet', 'Gas range cooker, no cylinderstat, plus solar', 'Electric instantaneous at point of use, no cylinderstat', 'underfloor heating, off-peak', 'Oil range cooker, no cylinderstat, plus solar', 'Gas multipoint, no cylinderstat', 'Gas boiler/circulator, no cylinderstat, plus solar', 'Solid fuel range cooker, no cylinderstat', 'Oil range cooker, no cylinderstat', 'Solid fuel boiler/circulator, no cylinderstat', 'From secondary system, no cylinderstat', 'No system present: electric immersion assumed', 'Gas boiler/circulator, no cylinderstat', 'Solid fuel range cooker', 'Oil range cooker', 'Single-point gas water heater, standard tariff', 'Oil boiler/circulator, no cylinderstat', 'Solid fuel boiler/circulator', 'Electric multipoint', 'From main system, no cylinderstat', 'Electric immersion, standard tariff, no cylinderstat', 'Oil boiler/circulator', 'Gas multipoint']
+
+Node 3:
+	Count = 106253.0	Rate = 0.18758058595992583
+	['Single-point gas water heater', 'From secondary system', 'Oil range cooker, plus solar', 'From main system, 7-hour tariff (on-peak)', 'Gas instantaneous at point of use', 'Gas multipoint, plus solar', 'Electric immersion, standard tariff', 'Electric immersion, standard tariff |underfloor heating, standard tariff', 'Gas range cooker, plus solar', 'Electric instantaneous at point of use', 'Electric immersion, off-peak |underfloor heating, off-peak', 'Electric heat pump for water heating only, no cylinderstat', 'From main system, no cylinderstat, plus solar', 'Gas boiler/circulator', 'From main system, standard tariff', 'Electric immersion, off-peak, no cylinderstat']
+
+Node 4:
+	Count = 202330.0	Rate = 0.34256907033064793
+	['Solid fuel boiler/circulator, no cylinderstat, plus solar', 'Oil boiler/circulator, plus solar', 'Electric instantaneous at point of use, standard tariff', 'Electric immersion, dual tariff', 'From secondary system, plus solar', 'Electric immersion, off-peak, plus solar', 'Electric immersion, off-peak', 'Solid fuel range cooker, plus solar', 'Single-point gas water heater, off-peak', 'Electric heat pump for water heating only', 'Electric instantaneous at point of use, plus solar']
+
+Node 5:
+	Count = 18756.0	Rate = 0.8163254425250587
+	['Gas boiler/circulator, plus solar', 'Electric immersion, standard tariff, waste water heat recovery', 'Electric immersion, off-peak, no cylinderstat, plus solar', 'From main system, plus solar', 'Community scheme, no cylinderstat', 'Electric heat pump for water heating only, plus solar', 'Solid fuel boiler/circulator, plus solar']
+
+Node 6:
+	Count = 1312727.0	Rate = 0.5893296930740359
+	['From main system', 'No system present: electric immersion assumed, plus solar', 'Electric heat pump', 'Electric immersion, standard tariff, plus solar']
+
+
+
+Variable: HOT_WATER_ENERGY_EFF
+p-value: 0.0
+Chi2: 559403.9856041421
+
+Node 1:
+	Count = 166388.0	Rate = 0.8869569920907758
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 997260.0	Rate = 0.6810992118404429
+	['Good']
+
+Node 3:
+	Count = 420135.0	Rate = 0.12594761207707048
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 329051.0	Rate = 0.2330641754621624
+	['Average']
+
+
+
+Variable: HOT_WATER_ENV_EFF
+p-value: 0.0
+Chi2: 520311.1571491453
+
+Node 1:
+	Count = 181569.0	Rate = 0.8877451547345637
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 1047045.0	Rate = 0.6511553944672865
+	['Good']
+
+Node 3:
+	Count = 460705.0	Rate = 0.2073452643231569
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 223515.0	Rate = 0.08015569424870814
+	['Average']
+
+
+
+Variable: FLOOR_DESCRIPTION
+p-value: 0.0
+Chi2: 1071883.4756194234
+
+Node 1:
+	Count = 378851.0	Rate = 0.9931582601075357
+	['<missing>', 'average thermal transmittance 0.0 w/m²k', 'average thermal transmittance 0.2 w/m²k', 'average thermal transmittance 0.1 w/m²k', 'average thermal transmittance 2.0 w/m²k', 'average thermal transmittance 2.6 w/m²k', '(anheddiad arall islaw)', 'solid', 'solet, wedii inswleiddio (rhagdybiaeth)']
+
+Node 2:
+	Count = 420820.0	Rate = 0.7424219381208117
+	['average thermal transmittance 0.7 w/m²k', 'average thermal transmittance 1.5 w/m²k', '(same dwelling below) insulated', 'average thermal transmittance 0.8 w/m²k', 'average thermal transmittance 1.4 w/m²k', 'to unheated space, limited insulation', 'average thermal transmittance 1.0 w/m²k', 'to unheated space', 'average thermal transmittance 0.9 w/m²k', 'average thermal transmittance 1.1 w/m²k', 'to external air, limited insulation', 'average thermal transmittance 0.5 w/m²k', 'average thermal transmittance 0.6 w/m²k', 'suspended, limited insulation', 'average thermal transmittance 1.3 w/m²k', 'average thermal transmittance 0.4 w/m²k', 'solid, limited insulation', 'other premises below', 'to unheated space, insulated', 'average thermal transmittance 0.3 w/m²k', 'to external air, insulated']
+
+Node 3:
+	Count = 401022.0	Rate = 0.06786161357730998
+	['average thermal transmittance 2.3 w/m²k', '(eiddo arall islaw)', 'average thermal transmittance 3.5 w/m²k', 'average thermal transmittance 2.7 w/m²k', 'average thermal transmittance 3.0 w/m²k', 'to unheated space, limited insulation insulated', 'average thermal transmittance 3.4 w/m²k', 'average thermal transmittance 1.7 w/m²k', 'average thermal transmittance 2.2 w/m²k', 'average thermal transmittance 2.1 w/m²k', 'solet, dim inswleiddio (rhagdybiaeth)', 'to unheated space, no insulation', 'conservatory', 'to external air, no insulation', 'suspended, no insulation']
+
+Node 4:
+	Count = 578608.0	Rate = 0.2012761662472693
+	['crog, dim inswleiddio (rhagdybiaeth)', 'solid, no insulation', 'average thermal transmittance 1.2 w/m²k', 'no insulation']
+
+Node 5:
+	Count = 133533.0	Rate = 0.9290437569739315
+	['other premises below|(eiddo arall islaw)', 'insulated', 'solid, insulated', 'suspended, insulated', 'limited insulation']
+
+
+
+Variable: WINDOWS_DESCRIPTION
+p-value: 0.0
+Chi2: 643425.8263602206
+
+Node 1:
+	Count = 5514.0	Rate = 0.9309031556039173
+	['<missing>']
+
+Node 2:
+	Count = 205682.0	Rate = 0.05081144679651112
+	['partial secondary glazing', 'some triple glazing', 'single glazing and secondary glazing', 'mostly multiple glazing', 'mostly secondary glazing', 'mostly double glazing', 'partial double glazing', 'partial multiple glazing', 'solid, no insulation (assumed)', 'single glazing|single glazing', 'suspended, no insulation (assumed)', 'gwydrau triphlyg gan mwyaf', 'some secondary glazing', 'single and multiple glazing', 'some double glazing']
+
+Node 3:
+	Count = 117590.0	Rate = 0.08975252997703886
+	['single glazing and double glazing', 'single glazing', 'secondary glazing', 'double glazing', 'partial triple glazing', 'full secondary glazing', 'some multiple glazing']
+
+Node 4:
+	Count = 1189174.0	Rate = 0.4526419178354051
+	['mostly triple glazing', 'multiple glazing throughout', 'full double glazing', 'full triple glazing', 'unknown complex glazing regime']
+
+Node 5:
+	Count = 394874.0	Rate = 0.9927445210370903
+	['high performance glazing|high performance glazing', 'high performance glazing', 'partial double glazing|partial double glazing', 'multiple glazing throughout|multiple glazing throughout', 'full double glazing|full double glazing']
+
+
+
+Variable: WINDOWS_ENERGY_EFF
+p-value: 0.0
+Chi2: 820025.459700152
+
+Node 1:
+	Count = 402748.0	Rate = 0.9915331671417362
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 516767.0	Rate = 0.6777909580139598
+	['Good']
+
+Node 3:
+	Count = 234316.0	Rate = 0.059372812782737844
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 759003.0	Rate = 0.25415841571113684
+	['Average']
+
+
+
+Variable: WINDOWS_ENV_EFF
+p-value: 0.0
+Chi2: 820025.459700152
+
+Node 1:
+	Count = 402748.0	Rate = 0.9915331671417362
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 516767.0	Rate = 0.6777909580139598
+	['Good']
+
+Node 3:
+	Count = 234316.0	Rate = 0.059372812782737844
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 759003.0	Rate = 0.25415841571113684
+	['Average']
+
+
+
+Variable: WALLS_DESCRIPTION
+p-value: 0.0
+Chi2: 1238750.415988464
+
+Node 1:
+	Count = 173529.0	Rate = 0.9863769168265824
+	['<missing>', 'average thermal transmittance 0.0 w/m²k', 'average thermal transmittance 0.3 w/m²k']
+
+Node 2:
+	Count = 422207.0	Rate = 0.02737756598066825
+	['sandstone, no insulation', 'timber frame, no insulation', 'sandstone or limestone, no insulation', 'cob,', 'average thermal transmittance 2.7 w/m²k', 'average thermal transmittance 6.3 w/m²k', 'average thermal transmittance 3.2 w/m²k', 'average thermal transmittance 2.5 w/m²k', 'average thermal transmittance 3.0 w/m²k', 'average thermal transmittance 2.6 w/m²k', 'average thermal transmittance 2.8 w/m²k', 'cob, internal', 'park home wall, as built', 'granite or whinstone, no insulation', 'average thermal transmittance 1.9 w/m²k', 'park home wall, insulated', 'solid brick, no insulation']
+
+Node 3:
+	Count = 377184.0	Rate = 0.8364432213455502
+	['timber frame, insulated', 'cavity wall, insulated', 'cavity wall, filled cavity and internal insulation', 'timber frame, filled cavity', 'average thermal transmittance 0.5 w/m²k', 'cavity wall, filled cavity and external insulation', 'solid brick, filled cavity', 'average thermal transmittance 0.6 w/m²k', 'average thermal transmittance 0.4 w/m²k', 'system built, insulated']
+
+Node 4:
+	Count = 50645.0	Rate = 0.3198341395991707
+	['average thermal transmittance 1.6 w/m²k', 'average thermal transmittance 1.4 w/m²k', 'average thermal transmittance 1.5 w/m²k', 'average thermal transmittance 1.3 w/m²k', 'average thermal transmittance 1.1 w/m²k', 'cavity wall, partial insulation', 'cob, insulated', 'average thermal transmittance 2.3 w/m²k', 'average thermal transmittance 1.7 w/m²k', 'sandstone, filled cavity', 'solid brick, partial insulation', 'timber frame, partial insulation']
+
+Node 5:
+	Count = 299791.0	Rate = 0.5216734324913023
+	['average thermal transmittance 0.7 w/m²k', 'average thermal transmittance 0.8 w/m²k', 'solid brick, insulated', 'average thermal transmittance 1.0 w/m²k', 'average thermal transmittance 2.4 w/m²k', 'system built, partial insulation', 'cavity wall, filled cavity', 'sandstone or limestone, insulated', 'average thermal transmittance 1.2 w/m²k', 'granite or whinstone, insulated', 'average thermal transmittance 0.9 w/m²k', 'system built, filled cavity', 'sandstone, insulated']
+
+Node 6:
+	Count = 320685.0	Rate = 0.055057143302617836
+	['granite or whinstone, partial insulation', 'sandstone, partial insulation', 'average thermal transmittance 2.1 w/m²k', 'average thermal transmittance 1.8 w/m²k', 'system built, no insulation', 'average thermal transmittance 2.2 w/m²k', 'sandstone or limestone, partial insulation', 'cob, as built', 'cavity wall,', 'average thermal transmittance 2.0 w/m²k', 'cavity wall, no insulation']
+
+Node 7:
+	Count = 268793.0	Rate = 0.9968749186176723
+	['average thermal transmittance 0.1 w/m²k', 'average thermal transmittance 0.2 w/m²k', 'average thermal transmittance nan w/m²k', 'granite or whinstone,', 'cob, filled cavity']
+
+
+
+Variable: WALLS_ENERGY_EFF
+p-value: 0.0
+Chi2: 1188207.724187194
+
+Node 1:
+	Count = 432887.0	Rate = 0.9920187023403336
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 629680.0	Rate = 0.7282810316351163
+	['Good']
+
+Node 3:
+	Count = 417475.0	Rate = 0.02478471764776334
+	['Very Poor']
+
+Node 4:
+	Count = 110043.0	Rate = 0.35555192061285135
+	['Average']
+
+Node 5:
+	Count = 322749.0	Rate = 0.058646192552107054
+	['Poor']
+
+
+
+Variable: WALLS_ENV_EFF
+p-value: 0.0
+Chi2: 1188207.724187194
+
+Node 1:
+	Count = 432887.0	Rate = 0.9920187023403336
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 629680.0	Rate = 0.7282810316351163
+	['Good']
+
+Node 3:
+	Count = 417475.0	Rate = 0.02478471764776334
+	['Very Poor']
+
+Node 4:
+	Count = 110043.0	Rate = 0.35555192061285135
+	['Average']
+
+Node 5:
+	Count = 322749.0	Rate = 0.058646192552107054
+	['Poor']
+
+
+
+Variable: ROOF_DESCRIPTION
+p-value: 0.0
+Chi2: 989153.0469893228
+
+Node 1:
+	Count = 110261.0	Rate = 0.9722658056792519
+	['<missing>', 'average thermal transmittance 0.0 w/m²k', 'average thermal transmittance 0.2 w/m²k']
+
+Node 2:
+	Count = 367497.0	Rate = 0.7943765527337638
+	['(other premises above)', 'Pitched, insulated', 'average thermal transmittance 0.3 w/m²k']
+
+Node 3:
+	Count = 383165.0	Rate = 0.4678689337491681
+	['average thermal transmittance 0.7 w/m²k', 'Pitched, 400mm loft insulation', 'average thermal transmittance 1.6 w/m²k', 'Thatched, insulated at rafters', 'average thermal transmittance 1.5 w/m²k', 'Pitched, Joists loft insulation', 'average thermal transmittance 2.2 w/m²k', 'Pitched, 300mm loft insulation', 'Pitched, 300+mm loft insulation', 'Pitched, 350mm loft insulation', 'Pitched, 250mm loft insulation', 'Pitched, 200mm loft insulation', 'average thermal transmittance 1.1 w/m²k', 'Pitched, 270mm loft insulation', 'average thermal transmittance 1.3 w/m²k']
+
+Node 4:
+	Count = 149663.0	Rate = 0.07567668695669605
+	['Pitched, 75mm loft insulation', 'average thermal transmittance 1.8 w/m²k', 'Pitched, limited insulation', 'average thermal transmittance 2.3 w/m²k', 'Pitched, loft insulation', 'Flat, limited insulation', 'Roof room(s), thatched', 'Pitched, 50mm loft insulation', 'Roof room(s), thatched with additional insulation', 'Pitched, Unknown loft insulation', 'Thatched, with additional insulation', 'Pitched, 0mm loft insulation', 'Thatched']
+
+Node 5:
+	Count = 279035.0	Rate = 0.9971795652875087
+	['average thermal transmittance 0.1 w/m²k', 'Roof room(s), loft insulation', "Pitched, Don't know loft insulation", 'Pitched, Flat Roof Insulation loft insulation']
+
+Node 6:
+	Count = 122048.0	Rate = 0.2980302831672784
+	['average thermal transmittance 1.2 w/m²k', 'Pitched, insulated at rafters', 'average thermal transmittance 0.6 w/m²k', 'Flat', 'average thermal transmittance 0.5 w/m²k', 'average thermal transmittance 1.0 w/m²k', 'Pitched, 150mm loft insulation', 'average thermal transmittance 1.9 w/m²k']
+
+Node 7:
+	Count = 189499.0	Rate = 0.16197974659496883
+	['Pitched, 100mm loft insulation', 'average thermal transmittance 0.8 w/m²k', 'average thermal transmittance 2.0 w/m²k', 'Pitched,  loft insulation', 'Roof room(s), ceiling insulated']
+
+Node 8:
+	Count = 34141.0	Rate = 0.5764623180340354
+	['Flat, insulated', 'Pitched', 'average thermal transmittance 0.4 w/m²k', 'Roof room(s), insulated', 'average thermal transmittance 1.4 w/m²k', 'Pitched, 400+mm loft insulation']
+
+Node 9:
+	Count = 277525.0	Rate = 0.006082334924781551
+	['Pitched, 11mm loft insulation', 'average thermal transmittance 4.2 w/m²k', 'Pitched, 1mm loft insulation', 'average thermal transmittance 2.4 w/m²k', 'average thermal transmittance 3.6 w/m²k', 'Roof room(s)', 'average thermal transmittance 5.0 w/m²k', 'average thermal transmittance 2.8 w/m²k', 'average thermal transmittance 2.5 w/m²k', 'average thermal transmittance nan w/m²k', 'Pitched,mm loft insulation', 'average thermal transmittance 2.6 w/m²k', 'average thermal transmittance 2.1 w/m²k', 'Roof room(s), thatched, with additional insulation', 'average thermal transmittance 0.9 w/m²k', 'Roof room(s), no insulation', 'Pitched, 12mm loft insulation', 'Pitched, no insulation', 'Pitched, 25mm loft insulation', 'Roof room(s), limited insulation', 'Flat, no insulation']
+
+
+
+Variable: ROOF_ENERGY_EFF
+p-value: 0.0
+Chi2: 811383.5216326386
+
+Node 1:
+	Count = 310664.0	Rate = 0.8076925553009039
+	['<missing>']
+
+Node 2:
+	Count = 578744.0	Rate = 0.5576213317114302
+	['Good']
+
+Node 3:
+	Count = 289394.0	Rate = 0.008058218207702993
+	['Very Poor']
+
+Node 4:
+	Count = 385041.0	Rate = 0.8707799948576905
+	['Very Good']
+
+Node 5:
+	Count = 254793.0	Rate = 0.15480409587390548
+	['Average']
+
+Node 6:
+	Count = 94198.0	Rate = 0.060670077920974966
+	['Poor']
+
+
+
+Variable: ROOF_ENV_EFF
+p-value: 0.0
+Chi2: 811383.5216326386
+
+Node 1:
+	Count = 310664.0	Rate = 0.8076925553009039
+	['<missing>']
+
+Node 2:
+	Count = 578744.0	Rate = 0.5576213317114302
+	['Good']
+
+Node 3:
+	Count = 289394.0	Rate = 0.008058218207702993
+	['Very Poor']
+
+Node 4:
+	Count = 385041.0	Rate = 0.8707799948576905
+	['Very Good']
+
+Node 5:
+	Count = 254793.0	Rate = 0.15480409587390548
+	['Average']
+
+Node 6:
+	Count = 94198.0	Rate = 0.060670077920974966
+	['Poor']
+
+
+
+Variable: MAINHEAT_ENERGY_EFF
+p-value: 0.0
+Chi2: 313016.19191422005
+
+Node 1:
+	Count = 135889.0	Rate = 0.8817343567176151
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 1228318.0	Rate = 0.590164761893907
+	['Good']
+
+Node 3:
+	Count = 245792.0	Rate = 0.22779016404114047
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 302835.0	Rate = 0.18392854194528374
+	['Average']
+
+
+
+Variable: MAINHEAT_ENV_EFF
+p-value: 0.0
+Chi2: 280746.67874135793
+
+Node 1:
+	Count = 162472.0	Rate = 0.8564306465113989
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 1284103.0	Rate = 0.5599270463506432
+	['Good']
+
+Node 3:
+	Count = 320062.0	Rate = 0.286950653310921
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 146197.0	Rate = 0.043947550223328795
+	['Average']
+
+
+
+Variable: MAINHEATCONT_DESCRIPTION
+p-value: 0.0
+Chi2: 755600.3186609687
+
+Node 1:
+	Count = 328495.0	Rate = 0.9819814609050366
+	['<missing>', 'Time and temperature zone control', 'Flat rate charging, programmer and at least two room thermostats', 'Unit charging, programmer and TRVs', 'Flat rate charging*, programmer and TRVs', "Delayed start stat & program & TRV's", 'Charging system linked to use of community heating, TRVs', 'Programmer and delayed start thermostat', 'Charging system linked to use of communit heating, programmer and room thermostat', 'Delayed start thermostat and programmer', 'Charging system linked to use of community heating, programmer', 'Charging linked to use, programmer and TRVs', '2207 Time and temperature zone control', 'Programmer and at least two room thermostats including a delayed start thermostat', 'Thermostat, programmer and TRVs', 'Not applicable (boiler provides DHW only)', 'Delayed start thermostat, programmer and TRVs', 'Charging system linked to use of communit heating, room thermostat only', "TRV's, program & flow switch", 'TÃ¢l un gyfradd, TRVs', 'Charging system linked to use of community heating, programmer and at least two room stats', 'Programmer, roomstat and TRVs', 'Charging system linked to use of community heating, programmer and at least two room thermostats', 'Charging system linked to use of community heating, programmer and TRVs']
+
+Node 2:
+	Count = 86433.0	Rate = 0.4176414101095646
+	['Appliance thermostat and programmer', 'Controls for high heat retention storage heaters', 'Programmer, TRVs and boiler energy manager', 'Thermostat and programmer', 'Temperature zone control', 'Automatic charge control', 'Programmer and at least 2 room thermostats', 'Programmer and appliance thermostats']
+
+Node 3:
+	Count = 147588.0	Rate = 0.01757595468466271
+	['Programmer, no room thermostat', 'Not relevant (supplies DHW only)', 'No time or thermostatic control of room temp', 'No thermostatic control of room temperature', 'No time or thermostatic control of room temperature', 'Dim rheolaeth amser na rheolaeth thermostatig ar dymheredd yr ystafell', 'Rhaglennydd a thermostat ystafell', 'Programmer, no thermostat', 'Rheoli?r tal a llaw', 'Rhaglennydd a thermostatau ar y cyfarpar', 'Rhaglennydd, TRVs a falf osgoi', 'Dim rheolaeth thermostatig ar dymheredd yr ystafell', 'Rheoli’r tâl â llaw', 'Appliance thermostat', 'None']
+
+Node 4:
+	Count = 727647.0	Rate = 0.6214249491855254
+	['Programmer, room thermostat and TRVs', 'Programmer and room thermostats', 'Rhaglennydd, thermostat ystafell a TRVs', 'Flat rate charging, programmer, no room thermostat', 'Charging system linked to use of communit heating, programmer and TRVs', 'Flat rate charging, no thermostatic control', 'Programmer and at least two room thermostats']
+
+Node 5:
+	Count = 38744.0	Rate = 0.9173549452818501
+	['Flat rate charging, programmer and room stat', 'Flat rate charging, programmer no room thermostat', 'Celect-type controls', 'Flat rate charging, room thermostat only', 'Flat rate charging, no stat control of room temperature', 'Charging system linked to use of community heating, programmer?and TRVs', 'Charging system linked to use of community heating, programmerand room thermostat', 'Celect control', 'Charging system linked to the use of community heating, prog and TRVs', 'Flat rate charging, programmer and TRVs', 'Charging system linked to the use of community heating, programmer and TRVs', 'Flat rate charging, programmer and room thermostat', 'Charging system linked to use of communit heating, TRVs', 'Celect controls', 'Programmer, TRVs and flow switch', 'Flat rate charging, TRVs', 'Charging system linked to use of community heating, room thermostat only', 'Charging system linked to use of community heating, programmer and room thermostat', 'Flat rate charging, no thermostatic control of room temperature']
+
+Node 6:
+	Count = 130526.0	Rate = 0.2891531189188361
+	['Manual charge control']
+
+Node 7:
+	Count = 453401.0	Rate = 0.15369838178565992
+	['Room thermostat only', 'Room thermostats only', 'Programmer, TRVs and bypass', 'Programmer and room thermostat', 'Appliance thermostats', 'TRVs and bypass']
+
+
+
+Variable: MAINHEATC_ENERGY_EFF
+p-value: 0.0
+Chi2: 541947.54378025
+
+Node 1:
+	Count = 307135.0	Rate = 0.983333062008563
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 744139.0	Rate = 0.5855088901401485
+	['Good']
+
+Node 3:
+	Count = 118516.0	Rate = 0.05616119342536029
+	['Very Poor']
+
+Node 4:
+	Count = 492861.0	Rate = 0.30756744802287056
+	['Average']
+
+Node 5:
+	Count = 250183.0	Rate = 0.2416511113864651
+	['Poor']
+
+
+
+Variable: MAINHEATC_ENV_EFF
+p-value: 0.0
+Chi2: 541947.54378025
+
+Node 1:
+	Count = 307135.0	Rate = 0.983333062008563
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 744139.0	Rate = 0.5855088901401485
+	['Good']
+
+Node 3:
+	Count = 118516.0	Rate = 0.05616119342536029
+	['Very Poor']
+
+Node 4:
+	Count = 492861.0	Rate = 0.30756744802287056
+	['Average']
+
+Node 5:
+	Count = 250183.0	Rate = 0.2416511113864651
+	['Poor']
+
+
+
+Variable: LIGHTING_ENERGY_EFF
+p-value: 0.0
+Chi2: 357980.29060032085
+
+Node 1:
+	Count = 927017.0	Rate = 0.714386036070536
+	['<missing>', 'Very Good']
+
+Node 2:
+	Count = 550191.0	Rate = 0.37242521233535264
+	['Good', 'Average']
+
+Node 3:
+	Count = 435626.0	Rate = 0.20490971613264589
+	['Very Poor', 'Poor']
+
+
+
+Variable: LIGHTING_ENV_EFF
+p-value: 0.0
+Chi2: 359475.16608074115
+
+Node 1:
+	Count = 4993.0	Rate = 0.9751652313238534
+	['<missing>']
+
+Node 2:
+	Count = 550438.0	Rate = 0.37247610085059535
+	['Good', 'Average']
+
+Node 3:
+	Count = 435775.0	Rate = 0.20494521255234927
+	['Very Poor', 'Poor']
+
+Node 4:
+	Count = 921628.0	Rate = 0.7131000794246702
+	['Very Good']
+
+
+
+Variable: MAIN_FUEL
+p-value: 0.0
+Chi2: 475114.0753588027
+
+Node 1:
+	Count = 94084.0	Rate = 0.9001849411164491
+	['<missing>', 'Gas: bottled LPG', 'Gas: bulk LPG', 'Oil: heating oil', 'Solid fuel: wood logs', 'B30D (community)', 'coal (community)', 'electricity (community)', 'mains gas (community)', 'Electricity: electricity, unspecified tariff', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)']
+
+Node 2:
+	Count = 46685.0	Rate = 0.007282853164828103
+	['dual fuel - mineral + wood', 'To be used only when there is no heating/hot-water system or data is from a community network', 'house coal - this is for backwards compatibility only and should not be used', 'B30K', 'biodiesel from any biomass source', 'bioethanol', 'biogas (not community)', 'appliances able to use mineral oil or liquid biofuel', 'wood pellets in bags for secondary heating', 'heat from boilers that can use mineral oil or biodiesel (community)', 'smokeless coal', 'To be used only when there is no heating/hot-water system', 'bottled LPG', 'LPG (not community)', 'house coal (not community)']
+
+Node 3:
+	Count = 101450.0	Rate = 0.21857072449482504
+	['anthracite', 'oil - this is for backwards compatibility only and should not be used', 'electricity - this is for backwards compatibility only and should not be used']
+
+Node 4:
+	Count = 74119.0	Rate = 0.9997706391073814
+	['Community heating schemes: heat from boilers - biomass', 'Solid fuel: dual fuel appliance (mineral and wood)', 'biodiesel from vegetable oil only', 'Solid fuel: wood chips', 'LPG subject to Special Condition 18', 'waste combustion - this is for backwards compatibility only and should not be used', 'biogas (community)', 'Community heating schemes: heat from heat pump', 'Electricity: electricity displaced from grid', 'Gas: mains gas']
+
+Node 5:
+	Count = 601794.0	Rate = 0.7260590833408109
+	['LPG (community)', 'mains gas - this is for backwards compatibility only and should not be used', 'biogas - landfill - this is for backwards compatibility only and should not be used', 'wood chips', 'heat from boilers using biodiesel from any biomass source (community)']
+
+Node 6:
+	Count = 90227.0	Rate = 0.04763540846974852
+	['oil (not community)', 'B30K (not community)', 'bulk wood pellets', 'wood logs']
+
+Node 7:
+	Count = 698054.0	Rate = 0.3882923097640011
+	['biomass (community)', 'biomass - this is for backwards compatibility only and should not be used', 'waste combustion (community)', 'from heat network data (community)', 'LPG special condition', 'mains gas (not community)']
+
+Node 8:
+	Count = 206421.0	Rate = 0.3043440347639048
+	['electricity (not community)', 'LPG - this is for backwards compatibility only and should not be used', 'oil (community)']
+
+
+
+Variable: HEAT_LOSS_CORRIDOR
+p-value: 0.0
+Chi2: 92418.49967178737
+
+Node 1:
+	Count = 1482870.0	Rate = 0.45056410878903747
+	['<missing>']
+
+Node 2:
+	Count = 200756.0	Rate = 0.6521598358205981
+	['unheated corridor']
+
+Node 3:
+	Count = 96709.0	Rate = 0.888986547270678
+	['heated corridor']
+
+Node 4:
+	Count = 132499.0	Rate = 0.5388040664457845
+	['no corridor']
+
+
+
+Variable: MECHANICAL_VENTILATION
+p-value: 0.0
+Chi2: 570919.6050332859
+
+Node 1:
+	Count = 460780.0	Rate = 0.9849125396067537
+	['<missing>']
+
+Node 2:
+	Count = 1452054.0	Rate = 0.34612280259549577
+	['natural', 'mechanical, extract only', 'mechanical, supply and extract']
+
+
+
+Variable: SECONDHEAT_DESCRIPTION
+p-value: 0.0
+Chi2: 630384.840463671
+
+Node 1:
+	Count = 10574.0	Rate = 0.9837336864006052
+	['<missing>', 'Room heaters, |Gwresogyddion ystafell, |wood pellets|pelenni coed', 'Room heaters, liquid biofuel', 'Room heaters, |Gwresogyddion ystafell, |wood chips|asglodion coed', 'Room heaters, |Gwresogyddion ystafell, |mains gas|nwy prif gyflenwad', 'Room heaters, appliances able to use mineral oil or liquid biofuel', 'Room heaters, dual fuel', 'None|Dim', 'Room heaters, |Gwresogyddion ystafell, |wood logs|logiau coed', 'Room heaters', 'Room heaters, |Gwresogyddion ystafell, |electric|trydan']
+
+Node 2:
+	Count = 151919.0	Rate = 0.0493486660654691
+	['Room heaters, wood pellets (bags)', 'Other Space Heating Systems, electric', 'Electric ceiling heating', 'Gwresogyddion ystafell, nwy prif gyflenwad', 'Room heaters, main wood pellets', 'Hot-Water-Only Systems, gas', 'Room heaters, B30K', 'Room heaters, lpg', 'Mains Gas room heaters, gas', 'Gwresogyddion ystafell, glo', 'Gwresogyddion ystafell, trydan', 'Gwresogyddion ystafell, tanwydd di-fwg', 'Room heaters, heating oil', ',', 'Room heaters, bottled LPG', 'Gas/LPG boiler pre-1998 with balanced or open-flue, gas', 'Gwresogyddion ystafell, logiau coed', 'Room heaters, bulk LPG', 'Hot-Water-Only Systems, electric', 'Room heaters, secondary wood pellets', 'Gas/LPG boiler pre-1998, with fan-assisted flue, gas', 'LPG room heaters, gas', 'Room heaters, LNG', 'Room heaters, smokeless fuel', 'Room heaters, coal', 'Room heaters, bottled gas', 'Room heaters, LPG', 'Room heaters, oil', 'Room heaters, anthracite', 'Room heaters,', 'Room heaters, dual fuel (mineral and wood)']
+
+Node 3:
+	Count = 219148.0	Rate = 0.2982596236333437
+	['Room heaters, electric', 'Electric Underfloor Heating (Standard tariff), electric', 'Gas (including LPG) room heaters, gas']
+
+Node 4:
+	Count = 282072.0	Rate = 0.1293251368444936
+	['Room heaters, mains gas', 'Gas/LPG boiler 1998 or later, gas', 'Portable electric heaters']
+
+Node 5:
+	Count = 189157.0	Rate = 0.24317894658934114
+	['Portable electric heaters (assumed)', 'Room heaters, wood chips', 'Room heaters, wood logs']
+
+Node 6:
+	Count = 1059964.0	Rate = 0.7459470321633564
+	['None', 'Dim', 'Room heaters, bulk wood pellets', 'Room heaters, ', 'Room heaters, (null)', 'Room heaters, biodiesel from any biomass source', 'Room heaters, wood pellets', 'Room heaters, bioethanol', 'Portable electric heaters(assumed)']
+
+
+
+Variable: LIGHTING_DESCRIPTION
+p-value: 0.0
+Chi2: 437022.24764417415
+
+Node 1:
+	Count = 671019.0	Rate = 0.8049086538533186
+	['<missing>', 'low energy lighting in all fixed outlets']
+
+Node 2:
+	Count = 329619.0	Rate = 0.19335657228497144
+	['no low energy lighting', 'low energy lighting 10% of fixed outlets', 'low energy lighting 0% of fixed outlets', 'goleuadau ynni-isel ym mhob un ogçör mannau gosod']
+
+Node 3:
+	Count = 466577.0	Rate = 0.36597389069756975
+	['low energy lighting 60% of fixed outlets', 'low energy lighting 30% of fixed outlets', 'low energy lighting 40% of fixed outlets', 'low energy lighting 50% of fixed outlets']
+
+Node 4:
+	Count = 158862.0	Rate = 0.42944820032481024
+	['low energy lighting 70% of fixed outlets', 'low energy lighting 90% of fixed outlets']
+
+Node 5:
+	Count = 141315.0	Rate = 0.5100024767363691
+	['low energy lighting 100% of fixed outlets', 'low energy lighting 80% of fixed outlets']
+
+Node 6:
+	Count = 145442.0	Rate = 0.28550900015126307
+	['low energy lighting 20% of fixed outlets']

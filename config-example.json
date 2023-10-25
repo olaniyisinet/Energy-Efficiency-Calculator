@@ -1,0 +1,21 @@
+{
+  "DEFAULT": {
+    "epc_path": "C:/Users/KingRemy/OneDrive - University of Keele/Documents/SEND/DATASETS/EPCs",
+    "polygon_path": "",
+    "epc_chaid_fname": "CHAID",
+    "epc_fname_suffix": ".csv",
+    "epc_output_fname": "epc_england_District_Councils",
+    "processing_path": "C:/Users/KingRemy/OneDrive - University of Keele/Documents/SEND/DATASETS/EPCs/District_Councils",
+    "epc_england_fname": "epc_england_District_Councils",
+    "epc_train_fname": "06_epc_england_District_Councils_train_fname",
+    "epc_test_fname": "06_epc_england_District_Councils_test_fname",
+    "epc_train_clean_fname": "041_epc_england_District_Councils_train_fname",
+    "epc_test_clean_fname": "041_epc_england_District_Councils_test_fname",
+    "epc_train_dd_fname": "06_epc_england_District_Councils_train_fname",
+    "epc_test_dd_fname": "06_epc_england_District_Councils_test_fname",
+    "epc_train_domain_fname": ".csv",
+    "epc_test_domain_fname": ".csv",
+    "epc_train_ex_fname": ".csv",
+    "epc_test_ex_fname": ".csv"
+  }
+}

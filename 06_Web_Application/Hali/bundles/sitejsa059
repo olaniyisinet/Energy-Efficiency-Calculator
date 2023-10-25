@@ -1,0 +1,849 @@
+function itemSelector(n, t) {
+    function d() {
+        var t, n, r = o[0].style.left.replace("%", "");
+        for (index = 0; index < i.length; index++)(n > Math.abs(i[index].posX - r) || n === undefined) && (n = Math.abs(i[index].posX - r), t = index);
+        return t
+    }
+
+    function g() {
+        r = d();
+        e(r)
+    }
+
+    function e(n) {
+        r = n;
+        var t = o[0].style.left.replace("%", ""),
+            e = Math.abs(i[n].posX - t) * 5;
+        o.animate({
+            left: i[n].posX + "%"
+        }, e);
+        tt(n);
+        nt(n);
+        switch (r) {
+            case 0:
+                s.is(":focus") && h.focus();
+                s.prop("disabled", !0);
+                h.prop("disabled", !1);
+                break;
+            case i.length - 1:
+                h.is(":focus") && s.focus();
+                s.prop("disabled", !1);
+                h.prop("disabled", !0);
+                break;
+            default:
+                s.prop("disabled", !1);
+                h.prop("disabled", !1)
+        }
+        a !== undefined && a.val(i[r].val);
+        f.val(i[r].val);
+        u.trigger("onselected", [i[r].val, i[r].text])
+    }
+
+    function w(t) {
+        var r;
+        if (i.forEach(function(n) {
+                n.val == t && (r = i.indexOf(n))
+            }), r !== undefined) e(r);
+        else {
+            console.log(i);
+            throw "Item selector (" + n + ") - value not found (" + t + ")";
+        }
+    }
+
+    function it() {
+        f.prop("selectedIndex") !== -1 ? w(f.val()) : (r = undefined, e())
+    }
+
+    function nt(n) {
+        v.find("[data-item]").removeClass("is-selected");
+        v.find('[data-item="' + n + '"]').addClass("is-selected")
+    }
+
+    function tt(n) {
+        b.html(i[n].text)
+    }
+
+    function y(n) {
+        n ? (l = !0, o.addClass("is-dragging")) : (l = !1, o.removeClass("is-dragging"))
+    }
+    var i = [],
+        r, l, u, f, b, c, k, o, v, s, h, a, p;
+    this.setAssociatedControl = function(n) {
+        a = $("#" + n)
+    };
+    this.addItem = function(n, t) {
+        var r = {
+            text: n,
+            val: t,
+            posX: 0
+        };
+        i.push(r)
+    };
+    this.getSelectedVal = function() {
+        return i[r].val
+    };
+    this.getSelectedText = function() {
+        return i[r].text
+    };
+    this.setItemSelectedByValue = function(n) {
+        w(n)
+    };
+    this.build = function() {
+        function ut(n) {
+            switch (n.which) {
+                case 37:
+                case 38:
+                    r > 0 && (r--, e(r));
+                    break;
+                case 39:
+                case 40:
+                    r < i.length - 1 && (r++, e(r));
+                    break;
+                default:
+                    return
+            }
+        }
+
+        function rt(n) {
+            var t, i;
+            switch (n.type) {
+                case "mousemove":
+                case "mouseup":
+                    t = n.pageX;
+                    break;
+                case "touchmove":
+                case "touchend":
+                    t = n.touches[0].pageX;
+                    break;
+                default:
+                    throw "Event is not recognized";
+            }
+            var u = c.offset().left,
+                r = c.width(),
+                f = 100 / r * Math.min(Math.max(0, t - u), r);
+            o.css({
+                left: f + "%"
+            });
+            l ? (i = d(), tt(i), nt(i)) : g()
+        }
+        u = $("#" + n);
+        u.children().off();
+        $(document).off("mousemove", rt);
+        $(document).off("touchmove", rt);
+        u.empty().addClass("item-selector").prop("tabindex", "0");
+        u.append('<div class="item-selector-collapsed" aria-hidden="true"><span class="item-text"><\/span><button type="button" class="item-prev" tabindex="-1"><\/button><button type="button" class="item-next" tabindex="-1"><\/button><\/div>');
+        u.append('<div class="item-selector-expanded" aria-hidden="true"><\/div>');
+        p = u.find(".item-selector-expanded");
+        p.append('<div class="item-selector-track-wrapper" aria-hidden="true"><div class="item-selector-track" aria-hidden="true"><div class="item-selector-handle" aria-hidden="true"><\/div><\/div><\/div>');
+        p.append('<div class="item-selector-items-wrapper" aria-hidden="true"><div class="item-selector-items" aria-hidden="true"><\/div>');
+        b = u.find(".item-text");
+        c = u.find(".item-selector-track");
+        k = u.find(".item-selector-track-wrapper");
+        o = c.find(".item-selector-handle");
+        v = u.find(".item-selector-items");
+        s = u.find(".item-prev");
+        h = u.find(".item-next");
+        var ft = 100 / (i.length - 1);
+        for (index = 0; index < i.length; index++) i[index].posX = ft * index, c.append('<div class="track-point" style="left:' + i[index].posX + '%" data-value="' + i[index].val + '" data-item="' + index + '"  aria-hidden="true"><\/div>'), v.append('<div class="tick" style="left:' + i[index].posX + '%" aria-hidden="true"><\/div>'), v.append('<span class="item-label" style="left:' + i[index].posX + '%" data-item="' + index + '" aria-hidden="true">' + i[index].text + "<\/span>");
+        f = u.parent().find("#item-selector-" + n);
+        f.length === 0 ? (f = $("<select><\/select>"), f.attr("id", "item-selector-" + n), f.attr("data-item-selector", n), f.attr("class", "sr-only sr-only-focusable"), f.attr("tabindex", "-1"), f.attr("aria-labelledby", t), u.parent().append(f)) : f.find("option").remove();
+        $.each(i, function(n, t) {
+            f.append($("<option />").val(t.val).text(t.text))
+        });
+        u.focus(function() {
+            $(document).off("keydown", ut).on("keydown", ut)
+        });
+        u.focusout(function() {
+            $(document).off("keydown", ut);
+            $(document).off("mousemove", rt);
+            l && (y(!1), g())
+        });
+        u.find("[data-item]").click(function() {
+            e($(this).attr("data-item"));
+            u.focus()
+        });
+        k.click(function(n) {
+            var r, t, u = 100 / c.width() * (n.pageX - c.offset().left);
+            for (index = 0; index < i.length; index++)(t > Math.abs(i[index].posX - u) || t === undefined) && (t = Math.abs(i[index].posX - u), r = index);
+            e(r)
+        });
+        o.on("mousedown", function(n) {
+            n.preventDefault();
+            $(document).on("mousemove", rt);
+            y(!0);
+            u.focus()
+        });
+        $(document).on("mouseup", function(n) {
+            l && (y(!1), $(document).off("mousemove", rt), rt(n))
+        });
+        o.on("touchstart", function() {
+            $(document).on("touchmove", rt);
+            y(!0);
+            u.focus()
+        });
+        $(document).on("touchend", function(n) {
+            l && (y(!1), $(document).off("touchmove", rt), rt(n))
+        });
+        s.mousedown(function(n) {
+            n.preventDefault();
+            u.focus();
+            r > 0 && (r--, e(r))
+        });
+        s.keydown(function(n) {
+            ut(n)
+        });
+        h.mousedown(function(n) {
+            n.preventDefault();
+            u.focus();
+            r < i.length - 1 && (r++, e(r))
+        });
+        h.keydown(function(n) {
+            ut(n)
+        });
+        f.change(function() {
+            it()
+        });
+        a.val() !== undefined && a.val() !== "" ? w(a.val()) : e(0)
+    }
+}
+
+function imageSelector(n, t, i) {
+    function c(n) {
+        if (l) {
+            var u = y.width(),
+                i = s.eq(0).outerWidth(!0),
+                t;
+            t = u / 2 - i * f - i / 2;
+            n ? o.animate({
+                left: t + "px"
+            }, 200, function() {
+                k()
+            }) : (k(), o.css("left", t + "px"))
+        } else k();
+        l && ht === !0 && (e = f, p());
+        a.text(r[f].text)
+    }
+
+    function k() {
+        s.removeClass("is-viewed is-viewed-prev is-viewed-next");
+        s.eq(f).addClass("is-viewed");
+        f >= 1 && s.eq(f - 1).addClass("is-viewed-prev");
+        f < r.length && s.eq(f + 1).addClass("is-viewed-next");
+        tt.removeClass("is-viewed");
+        tt.eq(f).addClass("is-viewed")
+    }
+
+    function p(n) {
+        e === undefined ? (u.removeClass("has-item-selected"), s.removeClass("is-selected"), a.text("Please select"), v.prop("selectedIndex", -1), h !== undefined && h.val(undefined), n || ft(undefined, "")) : (f = e, u.attr("data-value", r[e].val), u.attr("data-text", r[e].text), u.addClass("has-item-selected"), s.removeClass("is-selected"), s.eq(e).addClass("is-selected"), a.text(r[e].text), v.val(r[e].val), h !== undefined && h.val(r[e].val), n || ft(r[e].val, r[e].text))
+    }
+
+    function ft(n, t) {
+        u.trigger("onselected", n, t)
+    }
+
+    function d(n, t) {
+        var i;
+        if (r.forEach(function(t) {
+                t.val == n && (i = r.indexOf(t))
+            }), i !== undefined) f = i, e = i, c(!1), p(t);
+        else throw "Image selector - value not found (" + n + ")";
+    }
+
+    function lt() {
+        v.prop("selectedIndex") !== -1 ? d(v.val()) : (e = undefined, p())
+    }
+
+    function et() {
+        f > 0 ? f-- : f = r.length - 1;
+        c(!0)
+    }
+
+    function ot() {
+        f < r.length - 1 ? f++ : f = 0;
+        c(!0)
+    }
+
+    function it() {
+        if (u.is(":visible")) {
+            y.innerWidth() < o.outerWidth(!0) ? (u.addClass("image-selector-minimised"), l = !0, e !== undefined && (f = e)) : (u.removeClass("image-selector-minimised"), l = !1);
+            var t = y.width(),
+                r = o.outerWidth(!0),
+                i = s.eq(0).outerWidth(!0),
+                n;
+            l ? (n = t / 2 - i * f - i / 2, o.css("left", n + "px")) : (n = t / 2 - r / 2, o.css("left", n + "px"));
+            c(!1)
+        } else u.removeClass("image-selector-minimised"), l = !1
+    }
+
+    function rt(n) {
+        n ? (w = !0, o.addClass("is-dragging")) : (w = !1, o.removeClass("is-dragging"))
+    }
+
+    function st(n) {
+        switch (n.which) {
+            case 9:
+                break;
+            case 13:
+                e = f;
+                p();
+                break;
+            case 37:
+            case 38:
+                et();
+                break;
+            case 39:
+            case 40:
+                ot();
+                break;
+            default:
+                n.preventDefault();
+                return
+        }
+    }
+    var ut = "is_accessible_" + n,
+        r = [],
+        f = 0,
+        e, g, l, ht = !1,
+        w, ct = 4,
+        u = $("#" + n),
+        v, a, b, y, o, s, nt, tt, h, at = $.extend({}, {}, i);
+    this.setAssociatedControl = function(n) {
+        if (h = $("#" + n), h.length === 0) throw "Image selector - Associated control ID (" + n + ") does not exist";
+    };
+    this.addItem = function(n, t, i) {
+        var u = {
+            text: n,
+            imgUrl: t,
+            val: i
+        };
+        r.push(u)
+    };
+    this.clearItems = function() {
+        r = []
+    };
+    this.setItemSelected = function(t) {
+        if (Number.isInteger(t) && t < r.length - 1 && integer >= 0) f = t, e = t, c(!1), p();
+        else throw "Image selector (" + n + ") - Index invalid";
+    };
+    this.setItemSelectedByValue = function(n) {
+        d(n)
+    };
+    this.getSelectedVal = function() {
+        return e !== undefined ? r[e].val : undefined
+    };
+    this.getSelectedText = function() {
+        return r[e].text
+    };
+    this.getItems = function() {
+        return r
+    };
+    this.refresh = function() {
+        it()
+    };
+    this.build = function() {
+        function ft() {
+            var t = y.width(),
+                n = s.eq(0).outerWidth(!0),
+                i = parseFloat(o.css("left").replace("px", ""));
+            return Math.round((t / 2 - i + n / 2) / n) - 1
+        }
+        if (u.length === 0) throw "Image selector - Target element ID (" + n + ") is not valid";
+        for (u.empty().unbind(), u.empty().addClass("image-selector").prop("tabindex", "0"), u.append('<div class="items" aria-hidden="true"><\/div>'), u.append('<div class="item-selected" aria-hidden="true"><\/div>'), u.append('<div class="items-nav" aria-hidden="true"><div class="item-indicators-wrapper"><\/div><button type="button" class="item-prev" tabindex="-1"><\/button><button type="button" class="item-next" tabindex="-1"><\/button><\/div>'), y = u.find(".items"), a = u.find(".item-selected"), b = u.find(".items-nav"), nt = b.find(".item-indicators-wrapper"), $itemPrev = b.find(".item-prev"), $itemNext = b.find(".item-next"), y.append('<div class="items-slide" aria-hidden="true"><\/div>'), o = u.find(".items-slide"), index = 0; index < r.length; index++) o.append('<div class="item" data-value="' + r[index].val + '" data-item="' + index + '"><div class="item-image" style="background-image: url(' + r[index].imgUrl + ')"><\/div><div class="item-image-text">' + r[index].text + '<\/div><div class="item-image-shadow"><\/div><\/div>'), nt.append('<div class="item-indicator"><\/div>');
+        s = o.find(".item");
+        tt = nt.find(".item-indicator");
+        var i = Math.round(s.outerWidth(!0));
+        o.css("width", i * r.length);
+        u.append('<label for="' + ut + '" class="sr-only sr-only-focusable">' + t + "<\/label>");
+        u.append('<select id="' + ut + '" data-image-selector="' + n + '" class="sr-only sr-only-focusable"><\/select>');
+        v = u.find('select[data-image-selector="' + n + '"]');
+        $.each(r, function(n, t) {
+            v.append($("<option />").val(t.val).text(t.text))
+        });
+        $(window).resize(function() {
+            it()
+        });
+        s.on("mousedown touchstart", function(n) {
+            function r(n) {
+                var u, r, c = y.width(),
+                    a = o.width(),
+                    l = s.eq(0).outerWidth(!0),
+                    e, h;
+                e = c / 2 + l / 2 - a;
+                h = c / 2 - l / 2;
+                switch (n.type) {
+                    case "mousemove":
+                    case "mouseup":
+                        u = parseInt(n.pageX);
+                        break;
+                    case "touchmove":
+                    case "touchend":
+                        u = parseInt(n.touches[0].pageX);
+                        break;
+                    default:
+                        throw "Event is not recognized";
+                }
+                w ? (r = i + (u - t), r < e && (r = e), r > h && (r = h), o.css("left", r + "px"), f = ft(), k()) : Math.abs(t - u) > ct && rt(!0)
+            }
+
+            function h() {
+                $(document).off("mousemove touchmove", r);
+                $(document).off("mouseup touchend", h);
+                w ? (rt(!1), c(!0)) : (e = l.index(), f = e, c(!0), p())
+            }
+            var t, i, l = $(this);
+            n.preventDefault();
+            u.is(":focus") || u.focus();
+            switch (n.type) {
+                case "mousedown":
+                    t = parseInt(n.pageX);
+                    break;
+                case "touchstart":
+                    t = parseInt(n.touches[0].pageX);
+                    break;
+                default:
+                    throw "Event is not recognized";
+            }
+            i = parseFloat(o.css("left").replace("px", ""));
+            $(document).on("mousemove touchmove", r);
+            $(document).on("mouseup touchend", h)
+        });
+        s.mouseover(function() {
+            g = $(this).index();
+            l || a.text(r[g].text)
+        });
+        s.mouseout(function() {
+            g = undefined;
+            l ? a.text(r[f].text) : e !== undefined ? a.text(r[e].text) : a.text("")
+        });
+        u.focus(function() {
+            $(document).on("keydown", st)
+        });
+        u.focusout(function() {
+            $(document).off("keydown", st);
+            e !== undefined && (f = e, c(!0));
+            rt(!1)
+        });
+        $itemPrev.mousedown(function(n) {
+            n.preventDefault();
+            u.is(":focus") || u.focus();
+            et()
+        });
+        $itemNext.mousedown(function(n) {
+            n.preventDefault();
+            u.is(":focus") || u.focus();
+            ot()
+        });
+        v.change(function() {
+            lt()
+        });
+        h.length !== 0 && h.change(function() {
+            h.val() !== undefined && h.val() !== "" && d(h.val())
+        });
+        it();
+        h.val() !== undefined && h.val() !== "" ? d(h.val(), !0) : (r.length === 1 ? (f = 0, e = 0) : f = Math.floor(r.length / 2), c(!1))
+    }
+}
+
+function ProgressBar() {
+    this.buildProgress = function(n, t, i) {
+        var u, r, e, f;
+        if (document.getElementById(n)) {
+            for (t = parseInt(t), i = parseInt(i), u = $("#" + n), u.addClass("stage-progress"), u.append('<div class="stage-progress-track"><\/div>'), r = u.find(".stage-progress-track"), r.append('<div class="stage-progress-track-complete"><\/div>'), e = r.find(".stage-progress-track-complete"), r.attr("aria-hidden", "true"), u.append('<p class="sr-only">Stage ' + t + " of " + i + "<\/p>"), f = 100 / (i - 1), stage = 1; stage < i + 1; stage++) stage === t ? r.append('<div class="stage stage-active" style="left:' + f * (stage - 1) + '%"><span class="stage-num">' + stage + "<\/div>") : stage <= t ? r.append('<div class="stage stage-complete" style="left:' + f * (stage - 1) + '%"><span class="stage-num">' + stage + "<\/div>") : r.append('<div class="stage" style="left:' + f * (stage - 1) + '%"><span class="stage-num">' + stage + "<\/div>");
+            e.css("width", f * (t - 1) + "%")
+        } else throw "ProgressBar: Target element does not exist";
+    }
+}
+
+function setDefaultModalFocus(n) {
+    var t = $("input:visible:first", n),
+        i = $("button:visible:first", n);
+    $(t).length > 0 ? $(t).focus() : $(i).length > 0 && $(i).focus()
+}
+
+function GetGenericAjaxObject(n, t) {
+    var i = "";
+    return $.ajax({
+        url: n,
+        async: !0,
+        data: t,
+        type: "POST",
+        success: function(n) {
+            i = n
+        },
+        error: function(n, t, i) {
+            alert("GetGenericAjaxObject: " + i + " | " + n.responseText);
+            alert(n.responseText);
+            console.log(n.responseText)
+        }
+    }), i
+}
+
+function GetGenericAjaxObjectAndCallBack(n, t, i) {
+    var r;
+    $.ajax({
+        url: n,
+        async: !0,
+        data: t,
+        type: "POST",
+        success: function(n) {
+            r = n;
+            i(r)
+        },
+        error: function(n, t, i) {
+            n.status !== 0 && (alert("GetGenericAjaxObjectAndCallBack: " + i + " | " + n.responseText), alert(n.responseText), console.log(n.responseText))
+        }
+    })
+}
+
+function buildCustomSelect(n, t, i, r, u, f, e, o, s) {
+    var h, c;
+    if (h = n === 1 ? new imageSelector(t, o) : new itemSelector(t, o), c = $("#" + t), r.StatusCode === 200) {
+        if (r.ErrorCode === null) {
+            if ($.each(r.OptionList, function(t, r) {
+                    n === 1 ? h.addItem(r.Description, "../Content/images/icon/" + i + "/icon_" + r.ID + ".svg", r.ID) : h.addItem(r.Description, r.ID)
+                }), h.setAssociatedControl(u), h.build(), f !== null) $(c).on("onselected", function(n, t) {
+                f(t)
+            });
+            return e !== null && helpMeChoose(t, i, e, u), s !== null && s(), h
+        }
+        alert("buildCustomSelect: " + r.ErrorMessage);
+        hideLoading()
+    } else alert("buildCustomSelect: " + r.ErrorMessage + ", error code: " + r.StatusCode), hideLoading()
+}
+
+function scrollTo(n, t) {
+    console.log(n);
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#" + n).offset().top - 120
+    }, 500, function() {
+        t !== null && t()
+    })
+}
+
+function buildDropdownSelect(n, t, i, r) {
+    if (t.StatusCode === 200)
+        if (t.ErrorCode === null) {
+            var u = $("#" + n);
+            $(u).unbind();
+            $(u).empty();
+            u.append($("<option><\/option>").val("").html("Please select"));
+            $.each(t.OptionList, function(n, t) {
+                u.append($("<option><\/option>").val(t.ID).html(t.Description))
+            });
+            i !== null && $(u).change(function(n) {
+                n.stopImmediatePropagation();
+                i(this.value)
+            });
+            r !== null && r()
+        } else alert("buildDropdownSelect:" + n + " " + t.ErrorMessage), hideLoading();
+    else alert("buildDropdownSelect:" + n + " " + t.ErrorMessage + ", error code: " + t.StatusCode), hideLoading()
+}
+
+function scrollToElement(n) {
+    $("html, body").animate({
+        scrollTop: $("#" + n).offset().top
+    }, 100)
+}
+
+function scrollToTop() {
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow")
+}
+
+function openAJAXModal(n, t, i, r, u, f) {
+    var e = "/" + i + "/" + t;
+    $.ajax({
+        type: "Get",
+        url: e,
+        data: {
+            id: n
+        },
+        success: function(n) {
+            if (n.indexOf(u) >= 0) {
+                $("#" + r).html(n);
+                $("#" + u).modal("show");
+                $("#" + u).on("shown.bs.modal", function() {
+                    setDefaultModalFocus(this)
+                });
+                $("#" + u).on("hidden.bs.modal", function() {
+                    $(f).focus()
+                })
+            } else window.location.href = "/home/"
+        },
+        error: function(n, t, i) {
+            alert("openAJAXModal: " + t + " Error: " + i);
+            hideLoading()
+        }
+    })
+}
+
+function helpMeChoose(n, t, i, r) {
+    var u = 1,
+        f = $("#" + n).find(".item, .track-point").each(function() {
+            var h = this,
+                e = $(this).data("value"),
+                o = $(this).find(".item-image-text").html(),
+                s = "",
+                f = '<div class="option-row">';
+            $.ajax({
+                type: "Get",
+                url: "/AJAX/GetHelpMeChooseText",
+                data: {
+                    contentType: t,
+                    contentID: e
+                },
+                success: function(n) {
+                    s = n
+                },
+                error: function(n, t, i) {
+                    alert("helpMeChoose: " + t + " Error: " + i);
+                    hideLoading()
+                },
+                async: !1
+            });
+            f = f + '   <div class="option-image">';
+            f = f + '       <img src="../Content/Images/icon/' + t + "/icon_" + e + '.svg" alt="" />';
+            f = f + "   <\/div >";
+            f = f + '   <div class="option-text">';
+            f = f + '       <h2 id="' + n + "_option_" + u + '" class="option-name size-h3">' + o + "<\/h3>";
+            f = f + "       <p>" + s + "<\/p>";
+            f = f + "   <\/div>";
+            f = f + '   <div class="option-button">';
+            f = f + '       <button type="button" value="Select" class="btn btn-primary" onclick="helpMeChooseSelect(\'' + r + "'," + e + ')" aria-label="Select ' + o + '">Select<\/button>';
+            f = f + "   <\/div>";
+            f = f + "<\/div>";
+            $("#" + i).append(f);
+            u++
+        })
+}
+
+function helpMeChooseSelect(n, t) {
+    $("#" + n).val(t).trigger("change");
+    $(".modal").modal("hide")
+}
+
+function formDecorate() {
+    $("input[type=checkbox]").each(function() {
+        var n = $(this);
+        n.parent(".js-checkbox-wrapper").length || (n.wrap('<span class="js-checkbox-wrapper"><\/span>'), setControlState(n), n.change(function() {
+            setControlState(n)
+        }), n.focusin(function() {
+            n.parent().addClass("js-focus")
+        }), n.focusout(function() {
+            n.parent().removeClass("js-focus")
+        }))
+    });
+    $("input[type=radio]").each(function() {
+        var n = $(this);
+        n.parent(".js-radio-wrapper").length || (n.wrap('<span class="js-radio-wrapper"><\/span>'), setControlState(n), n.change(function() {
+            $('input[type=radio][name="' + n.attr("name") + '"]').each(function() {
+                setControlState($(this))
+            })
+        }), n.focusin(function() {
+            n.parent().addClass("js-focus")
+        }), n.focusout(function() {
+            n.parent().removeClass("js-focus")
+        }))
+    })
+}
+
+function setControlState(n) {
+    n.prop("checked") ? n.parent().addClass("js-checked") : n.parent().removeClass("js-checked")
+}
+
+function setMobileCollapse() {
+    $(".responsive-collapse").each(function() {
+        var n = $(this),
+            i = n.find(".responsive-collapse-toggle"),
+            t = n.find(".responsive-collapse-content");
+        i.on("click", function() {
+            var i = n.hasClass("in");
+            i ? t.slideUp("fast", function() {
+                n.removeClass("in");
+                t.css("display", "")
+            }) : t.slideDown("fast", function() {
+                n.addClass("in");
+                t.css("display", "")
+            })
+        })
+    })
+}
+
+function hecConfirm(n, t, i, r, u) {
+    $("#hec-confirmation").find(".hec-confirmation-title").html(n);
+    $("#hec-confirmation").find(".hec-confirmation-question").html(t);
+    $("#hec-confirmation").find("#btnOK").html(r !== null ? r : "OK");
+    $("#hec-confirmation").find("#btnCancel").html(u !== null ? u : "Cancel");
+    $("#hec-confirmation").fadeIn("fast", function() {
+        $("#hec-confirmation").find("#btnOK").focus()
+    });
+    $("#hec-confirmation").find("#btnOK").click(function() {
+        return i(), $("#hec-confirmation").fadeOut("fast"), $(this).unbind(), !0
+    });
+    $("#hec-confirmation").find("#btnCancel").click(function() {
+        return $("select").each(function() {
+            if ($(this).attr("ID") === "SelectedBudget" || $(this).attr("ID") === "SelectedGoal") {
+                var n = $(this).attr("data-reset");
+                $(this).val(n)
+            }
+        }), $("#hec-confirmation").fadeOut("fast"), $(this).unbind(), !1
+    })
+}
+
+function setToggleButton(n, t) {
+    $(".toggle-switch-checkbox").each(function() {
+        function f() {
+            r.prop("checked") ? u.addClass("js-checked") : u.removeClass("js-checked")
+        }
+        var i = $(this),
+            r = i.find("label input[type=checkbox]"),
+            u;
+        if (i.find("label .js-toggle-switch-wrapper").length === 0) {
+            t && n || (t = "Yes", n = "No");
+            r.after('<span class="js-toggle-switch-wrapper" aria-hidden="true"><span class="label-unchecked">' + n + '<\/span><span class="toggle"><\/span><span class="label-checked">' + t + "<\/span><\/span>");
+            u = i.find(".js-toggle-switch-wrapper");
+            f();
+            r.on("change", function() {
+                f()
+            })
+        }
+    })
+}
+
+function showLoading() {
+    $("#hec-loading").fadeIn("fast")
+}
+
+function hideLoading() {
+    $("#hec-loading").fadeOut("fast")
+}
+
+function addInputHandlers() {
+    $(".js-numeric").on("input", function(n) {
+        var t = $(this);
+        t.val(t.val().replace(/[^0-9]/g, ""));
+        n.which >= 48 && n.which <= 57 || n.preventDefault()
+    });
+    $(".js-decimal").on("input", function(n) {
+        var t = $(this),
+            i;
+        t.val(t.val().replace(/[^0-9\.]/g, ""));
+        n.which !== 46 && (n.which < 48 || n.which > 57) && n.preventDefault();
+        i = 0;
+        try {
+            i = t.val().match(/\./g).length
+        } catch (r) {}
+        i > 1 && (t.val(t.val().slice(0, -1)), n.preventDefault())
+    })
+}
+
+function buildStepProgress(n, t, r) {
+    var e = $("#" + n),
+        f = $('<div class="steps-progress">'),
+        u = $('<div class="steps" aria-hidden="true">');
+    for (i = 1; i <= t; i++) i < r ? u.append('<span class="step step-complete">') : i === r ? u.append('<span class="step step-current">') : u.append('<span class="step">');
+    f.append('<span class="step-label">Step ' + r + " of " + t + "<\/span>");
+    f.append(u);
+    e.append(f)
+}
+
+function showIEWarning() {
+    var n = window.navigator.userAgent,
+        t = /MSIE|Trident/.test(n);
+    t && $("#ieWarning").show()
+}
+
+function isValidPostcode(n) {
+    return /^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$/.test(n)
+}
+
+function formatPostcode(n) {
+    var t = n.replace(/(^[A-Z]{1,2}[0-9]{1,2})([0-9][A-Z]{2}$)/i, "$1 $2");
+    return t.toUpperCase()
+}
+
+function getPostcodeOutcode(n) {
+    return n = formatPostcode(n), n.substr(0, n.indexOf(" "))
+}
+
+function showNotification(n, t, i) {
+    n !== null && $("#hec-notification div.message").html(n);
+    i === null && (i = 2e3);
+    $("#hec-notification").fadeIn("fast").delay(i).fadeOut("fast")
+}
+
+function confirmStartAgain(n, t) {
+    var i = $(".hec-retrieval-code"),
+        r = i.length > 0 ? i.html() : "";
+    r.length > 0 ? hecConfirm(n, "Any unsaved changes will be lost.<br /><br /> If you need to recover this action plan, please make a note of the code " + $(".hec-retrieval-code").html() + ".<br /><br /> You can then enter it on the homepage to pick up where you left off.", function() {
+        window.location.href = t
+    }) : hecConfirm(n, "Your changes will be lost.", function() {
+        window.location.href = t
+    })
+}
+
+function setContentWithHelp(n) {
+    $(".js-content-with-help-row").each(function() {
+        function f() {
+            var f, e, s, h, o;
+            i.height() > r.height() ? (f = r, e = i) : (f = i, e = r);
+            t.height() > 0 && u.width() > n ? (s = u.scrollTop(), h = t.offset().top, s >= h ? (o = s - h, f.height() + o >= e.height() && (o = e.height() - f.height()), f.css("margin-top", o + "px")) : f.css("margin-top", 0)) : (i.css("margin-top", 0), r.css("margin-top", 0))
+        }
+        var u, t, i, r;
+        u = $(window);
+        t = $(this);
+        i = t.find(".js-col-help");
+        r = t.find(".js-col-content");
+        f();
+        $(document).on("scroll resize", function() {
+            f()
+        })
+    })
+}
+$(document).ready(function() {
+        $(".modal").on("shown.bs.modal", function() {
+            setDefaultModalFocus(this)
+        });
+        $(document).on("click", "[data-toggle='modal']", function() {
+            var n = $(this),
+                t = $(n.data("target"));
+            t.on("hidden.bs.modal", function() {
+                n.focus()
+            })
+        })
+    }),
+    function(n) {
+        n.fn.swipe = function() {
+            function s(n) {
+                n.preventDefault();
+                i = n.originalEvent.touches[0].pageX;
+                r = n.originalEvent.touches[0].pageY
+            }
+
+            function h(n) {
+                var s = "none",
+                    h = "none";
+                n.preventDefault();
+                u = n.changedTouches[0].pageX;
+                f = n.changedTouches[0].pageY;
+                i - u > t ? s = "left" : i - u < 0 - t && (s = "right");
+                r - f > t ? h = "up" : r - f < 0 - t && (h = "down");
+                o.triggerHandler({
+                    type: "swipe",
+                    directionX: s,
+                    directionY: h,
+                    elem: e,
+                    time: new Date
+                })
+            }
+            var e, o = n(this),
+                i, r, u, f, t = 70;
+            o.on("touchstart", function(n) {
+                e = this;
+                s(n)
+            }).on("touchend", function(n) {
+                h(n)
+            })
+        }
+    }(jQuery)

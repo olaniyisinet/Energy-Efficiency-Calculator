@@ -1,0 +1,170 @@
+function buildInputs(n) {
+    $("#hec-loading").fadeIn("fast", function() {
+        n ? (buildPropertyType(), buildPropertyAge(), buildBedrooms(), Promise.all([promisePropertyType, promisePropertyAge, promisePropertBedrooms]).then(function() {
+            populatePropertyType(function() {
+                populatePropertyAge(function() {
+                    populateBedrooms(function() {
+                        $("#hec-loading").fadeOut("fast", function() {
+                            showAllInputs(function() {
+                                scrollTo("conPropertyType", function() {
+                                    $("#ccPropertyType").focus()
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })) : (buildPropertyType(), buildPropertyAge(), buildBedrooms(), Promise.all([promisePropertyAge, promisePropertBedrooms]).then(function() {
+            populateBedrooms(function() {
+                $("#hec-loading").fadeOut("fast", function() {
+                    showAllInputs(function() {
+                        scrollTo("conPropertyAge", null)
+                    })
+                })
+            })
+        }))
+    })
+}
+
+function buildPropertyType() {
+    var n = "/WhereDoYouLive/GetPropertyTypes/",
+        t = {
+            postcodeOutcode: postcodeOutcode
+        };
+    promisePropertyType = new Promise(function(i) {
+        $.ajax({
+            url: n,
+            async: !0,
+            data: t,
+            type: "POST",
+            success: function(n) {
+                n.StatusCode === 200 ? (dataPropertyType = n, $("#postcodeError").hide(), i()) : (hideLoading(), $("#postcodeError").show()
+                
+                //  ,reject()
+                 )
+            },
+            error: function(n, t, i) {
+                n.status !== 0 && (alert("There is a problem communicating with the server. Please check your internet connection :" + i), alert(n.responseText), console.log(n.responseText));
+                hideLoading();
+                $("#postcodeError").show();
+                // reject()
+            }
+        })
+    })
+}
+
+function buildPropertyAge() {
+    var n = "/WhereDoYouLive/GetPropertyAges/",
+        t = {
+            postcodeOutcode: postcodeOutcode,
+            propertyTypeID: $("#PropertyTypeID").val()
+        };
+    promisePropertyAge = new Promise(function(i) {
+        $.ajax({
+            url: n,
+            async: !0,
+            data: t,
+            type: "POST",
+            success: function(n) {
+                dataPropertyAge = n;
+                i()
+            },
+            error: function(n, t, i) {
+                n.status !== 0 && (alert("There is a problem communicating with the server. Please check your internet connection :" + i), alert(n.responseText), console.log(n.responseText));
+  
+            }
+        })
+    })
+}
+
+function buildBedrooms() {
+    var n = "/WhereDoYouLive/GetBedrooms/",
+        t = {
+            postcodeOutcode: postcodeOutcode,
+            propertyTypeID: $("#PropertyTypeID").val()
+        };
+    promisePropertBedrooms = new Promise(function(i) {
+        $.ajax({
+            url: n,
+            async: !0,
+            data: t,
+            type: "POST",
+            success: function(n) {
+                dataBedrooms = n;
+                i()
+            },
+            error: function(n, t, i) {
+                n.status !== 0 && (alert("There is a problem communicating with the server. Please check your internet connection :" + i), alert(n.responseText), console.log(n.responseText));
+                // reject()
+            }
+        })
+    })
+}
+
+function setDataPropertyType(n) {
+    dataPropertyType = n
+}
+
+function setDataPropertyAge(n) {
+    dataPropertyAge = n
+}
+
+function setDataBedrooms(n) {
+    dataBedrooms = n
+}
+
+function populatePropertyType(n) {
+    propertyTypeSelect = buildCustomSelect(1, "ccPropertyType", "property-type", dataPropertyType, "PropertyTypeID", onchangePropertyType, null, "hPropertyType", n)
+}
+
+function populatePropertyAge(n) {
+    propertyAgeSelect = buildCustomSelect(2, "ccPropertyAge", "", dataPropertyAge, "PropertyAgeID", onchangePropertyAge, null, "hAge", n)
+}
+
+function populateBedrooms(n) {
+    bedroomsSelect = buildCustomSelect(2, "ccBedrooms", "", dataBedrooms, "Bedrooms", onchangeBedrooms, null, "hBedrooms", n)
+}
+
+function onchangePropertyType() {
+    $("#Bedrooms").val("");
+    buildInputs(!1)
+}
+
+function onchangePropertyAge() {}
+
+function onchangeBedrooms() {}
+
+function showAllInputs(n) {
+    $("#conHouseNumberOrName").slideDown();
+    $("#conPropertyAge").slideDown();
+    $("#conBedrooms").slideDown();
+    $("#conPropertyType").slideDown();
+    propertyTypeSelect.refresh();
+    $("#conButtons").show();
+    n !== null && n()
+}
+var postcodeValid = !1,
+    postcodeOutcode = "",
+    ccPropertyType, ccPropertyAge, ccBedrooms, dataPropertyType = null,
+    dataPropertyAge = null,
+    dataBedrooms = null,
+    propertyTypeSelect, propertyAgeSelect, bedroomsSelect, promisePropertyType, promisePropertyAge, promisePropertyBedrooms;
+$(document).ready(function() {
+    var n = new ProgressBar;
+    n.buildProgress("StepProgress", 1, 3);
+    $("#Postcode").keydown(function(n) {
+        n.which === 13 && n.preventDefault()
+    });
+    $("#Postcode").keyup(function(n) {
+         n.which === 13 ? n.preventDefault() : postcodeValid ? isValidPostcode($("#Postcode").val()) || (postcodeValid = !1, 
+            $("#conPropertyType").slideUp(), 
+            $("#conPropertyAge").slideUp(), 
+            $("#conBedrooms").slideUp(), 
+            $("#conButtons").hide()
+         ) : isValidPostcode($("#Postcode").val()) && (postcodeValid = !0, $("#Postcode").val(formatPostcode($("#Postcode").val())), postcodeOutcode = getPostcodeOutcode($("#Postcode").val()), $("#PostcodeOutCode").val(postcodeOutcode), $("#PropertyTypeID").val("101"), buildInputs(!0))
+    });
+    $("#PropertyTypeID").val() > 0 && $("#hec-loading").fadeIn("fast", function() {
+        postcodeOutcode = $("#PostcodeOutCode").val();
+        buildInputs(!0)
+    })
+})

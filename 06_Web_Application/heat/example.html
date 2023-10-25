@@ -1,0 +1,816 @@
+<div ng-if="showMainBuilding" class="ng-scope" style="">
+    <!-- ngInclude: '/partials/views/heatLossEstimator/_screen3Mainbuilding' -->
+    <div ng-include="'/partials/views/heatLossEstimator/_screen3Mainbuilding'" class="mt-30 ng-scope">
+      <button type="button" ng-click="backToPropertyInformation()" class="go-back-btn ng-scope">
+        <i class="fa fa-arrow-left"></i>
+        <span>Go Back</span>
+      </button>
+      <h2 class="title-heading ng-scope">Main building</h2>
+      <div class="row ng-scope">
+        <div class="col-md-3 col-sm-4 col-xs-12 text-center">
+          <div class="highlight-selected-orange">
+            <span>You have selected</span>
+            <b class="ng-binding">&nbsp;Domestic</b>
+          </div>
+          <!-- ngIf: domesticChecked -->
+          <img src="/images/heat_loss_estimator/domestic.png" alt="NO image" width="140" ng-if="domesticChecked" class="mt-10 ng-scope">
+          <!-- end ngIf: domesticChecked -->
+          <!-- ngIf: commercialChecked -->
+          <!-- ngIf: inputInitialForm.isExtension -->
+          <!-- ngIf: !inputInitialForm.isExtension -->
+          <div ng-if="!inputInitialForm.isExtension" class="mt-30 ng-scope">
+            <div class="highlight-selected-blue">
+              <b>No,&nbsp;</b>
+              <span>You have selected</span>
+              <b> &nbsp;no extension</b>
+            </div>
+            <img src="/images/heat_loss_estimator/home.svg" width="60">
+          </div>
+          <!-- end ngIf: !inputInitialForm.isExtension -->
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <form name="mainbuildingForm" novalidate="novalidate" ng-submit="submitMainBuildingForm(mainbuildingForm.$valid)" class="form-horizontal form-hle ng-pristine ng-invalid ng-invalid-required">
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/roofLight.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueRoofLights">U Value Roof/Ceiling Glazing (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueRoofLights" name="uValueRoofLights" id="uValueRoofLights" data-toggle="dropdown" ng-class="mainBuilding.uValueRoofLights === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value roof/Ceiling Glazing</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Single Glazing Wood/PVC frame (4.8)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Single Glazing Metal frame (5.7)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Standard Double Glazing Wood/PVC frame (2.8)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Standard Double Glazing Metal frame (3.4)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Double Glazing Low-E, Argon Filled Wood/PVC frame (2.1)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Double Glazing Low-E, Argon Filled Metal frame (2.6)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Triple Glazing Low-E, Argon Filled Wood/PVC frame (1.6)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Triple Glazing Low-E, Argon Filled Metal frame (2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Current Building Regulations Window Wood/PVC frame (2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Current Building Regulations Window Metal frame (2.2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 1.8</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 1.5</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 1.25</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 1</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                      <li ng-repeat="item in uValueRoofLightList" ng-click="changeUValueRoofLights(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofLightList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueRoofLights.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/roofTop.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueRoof">U Value Roof/Ceiling (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueRoof" name="uValueRoof" id="uValueRoof" data-toggle="dropdown" ng-class="mainBuilding.uValueRoof === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value roof/Ceiling</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Flat Roof No Insulation (1.69)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Pitched Roof No Insulation (2.51)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">50mm Insulation (0.6)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">100mm Insulation(0.34)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">200mm Insulation (0.18)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">300mm Insulation (0.12)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Current Building Regulations - New Build (0.2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Building Regulations 2006 (0.25)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.1</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.075</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Intermediate Floor Timber with insulation (0.32)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Intermediate Floor Timber without insulation (1.73)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Party Floor Concrete with insulation (0.57)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Party Floor Concrete without insulation (1.82)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                      <li ng-repeat="item in uValueRoofList" ng-click="changeUValueRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueRoofList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueRoof.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/roof.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="aboveRoof">What is above Roof?</label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.aboveRoof" name="aboveRoof" id="aboveRoof" data-toggle="dropdown" ng-class="mainBuilding.aboveRoof === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter above roof</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in aboveRoofList -->
+                      <li ng-repeat="item in aboveRoofList" ng-click="changeAboveRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Air</a>
+                      </li>
+                      <!-- end ngRepeat: item in aboveRoofList -->
+                      <li ng-repeat="item in aboveRoofList" ng-click="changeAboveRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Internal Room</a>
+                      </li>
+                      <!-- end ngRepeat: item in aboveRoofList -->
+                      <li ng-repeat="item in aboveRoofList" ng-click="changeAboveRoof(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Third Party Room</a>
+                      </li>
+                      <!-- end ngRepeat: item in aboveRoofList -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/window.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueWindows">U Value Windows (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueWindows" name="uValueWindows" id="uValueWindows" data-toggle="dropdown" ng-class="mainBuilding.uValueWindows === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value windows</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Single Glazing Wood/PVC frame (4.8)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Single Glazing Metal frame (5.7)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Standard Double Glazing Wood/PVC frame (2.8)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Standard Double Glazing Metal frame (3.4)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Double Glazing Low-E, Argon Filled Wood/PVC frame (2.1)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Double Glazing Low-E, Argon Filled Metal frame (2.6)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Triple Glazing Low-E, Argon Filled Wood/PVC frame (1.6)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Triple Glazing Low-E, Argon Filled Metal frame (2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Current Building Regulations Window Wood/PVC frame (2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Current Building Regulations Window Metal frame (2.2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">U-Value = 1.8</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">U-Value = 1.5</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">U-Value = 1.25</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">U-Value = 1</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                      <li ng-repeat="item in uValueWindowsList" ng-click="changeUValueWindows(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.name" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueWindowsList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueWindows.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/wall.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueExternalWalls">U Value External Walls (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueExternalWalls" name="uValueExternalWalls" id="uValueExternalWalls" data-toggle="dropdown" ng-class="mainBuilding.uValueExternalWalls === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value external walls</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Brick 102mm, plaster (2.97)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Brick 228mm, plaster (2.11)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Stone 12" (2.78)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Stone 18 "(2.23)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Concrete 102mm, Plaster (3.51)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Concrete 204mm, Plaster (2.8)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Open Cavity, Brick 102mm, plaster (1.37)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Open Cavity, Brick 102mm, Standard Aerated Block, Plaster (0.87)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Open Cavity, Render, Standard Aerated Block, Standard Aerated Block, Plaster (0.61)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Cavity Wall Filled, 50mm Mineral Wool, Brick 102mm, Plaster (0.56)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Cavity Wall Filled, Mineral Wool 50mm, Brick 102mm, Standard Aerated Block, Plaster (0.45)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Cavity Wall Filled, Mineral Wool 50mm, Render, Standard Aerated Block, Standard Aerated Block, Plaster (0.37)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Building Regulations - 2006 (0.35)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Timber Frame with Cladding, 100mm Insulation (0.32)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Current Building Regulations - New Build (0.3)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.25</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.2</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.15</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">U-Value = 0.1</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                      <li ng-repeat="item in uValueExternalWallList" ng-click="changeUValueExternalWall(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValueExternalWallList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueExternalWalls.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/door.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueExternalDoors">U Value External Doors (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueExternalDoors" name="uValueExternalDoors" id="uValueExternalDoors" data-toggle="dropdown" ng-class="mainBuilding.uValueExternalDoors === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value external doors</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in uValuesDoorsList -->
+                      <li ng-repeat="item in uValuesDoorsList" ng-click="changeUValueExternalDoors(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Solid Wood Door (3)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValuesDoorsList -->
+                      <li ng-repeat="item in uValuesDoorsList" ng-click="changeUValueExternalDoors(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">High Quality Door 50% glazing (2.2)</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValuesDoorsList -->
+                      <li ng-repeat="item in uValuesDoorsList" ng-click="changeUValueExternalDoors(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in uValuesDoorsList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueExternalDoors.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/floor.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="groundFloorType">Floor Type</label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.groundFloorType" name="groundFloorType" id="groundFloorType" data-toggle="dropdown" ng-class="mainBuilding.groundFloorType === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter floor type</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in floorTypeList -->
+                      <li ng-repeat="item in floorTypeList" ng-click="changeGroundFloorType(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Solid</a>
+                      </li>
+                      <!-- end ngRepeat: item in floorTypeList -->
+                      <li ng-repeat="item in floorTypeList" ng-click="changeGroundFloorType(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Suspended</a>
+                      </li>
+                      <!-- end ngRepeat: item in floorTypeList -->
+                      <li ng-repeat="item in floorTypeList" ng-click="changeGroundFloorType(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Third Party Room Below</a>
+                      </li>
+                      <!-- end ngRepeat: item in floorTypeList -->
+                      <li ng-repeat="item in floorTypeList" ng-click="changeGroundFloorType(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Internal Room Below</a>
+                      </li>
+                      <!-- end ngRepeat: item in floorTypeList -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-icon-input-label">
+              <img src="/images/heat_loss_estimator/groundFloor.svg" alt="NO image" width="32px">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                  <label for="uValueGroundFloor">U Value Ground Floor (W/m <sup>2</sup>K) </label>
+                  <div class="dropdown">
+                    <div type="button" ng-model="mainBuilding.uValueGroundFloor" name="uValueGroundFloor" id="uValueGroundFloor" data-toggle="dropdown" ng-class="mainBuilding.uValueGroundFloor === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                      <span class="ellipsis ng-binding">Enter U value ground floor</span>
+                      <div class="caret"></div>
+                    </div>
+                    <div class="dropdown-menu">
+                      <!-- ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">SGround Floor No Insulation (1.15)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor 25mm Insulation (0.62)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor 50mm Insulation (0.43)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor 75mm Insulation (0.32)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor 100mm Insulation (0.26)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor Current Building Regulations (0.25)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor U-Value = 0.2</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor U-Value = 0.15</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Ground Floor U-Value = 0.1</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Intermediate Floor Timber with insulation (0.32)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Intermediate Floor Timber without insulation (1.73)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Party Floor Concrete with insulation (0.57)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Party Floor Concrete without insulation (1.82)</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                      <li ng-repeat="item in groundFloorList" ng-click="changeUValueGroundFloor(item, 'mb')" class="ng-scope">
+                        <a href="javascript:void(0)" name="item.name" value="item.value" class="ng-binding">Custom Entry</a>
+                      </li>
+                      <!-- end ngRepeat: item in groundFloorList -->
+                    </div>
+                  </div>
+                </div>
+                <!-- ngIf: mainBuilding.uValueGroundFloor.name === 'Custom Entry' -->
+              </div>
+            </div>
+            <h3 class="text-center select-Value">
+              <div class="line-left"></div>
+              <div class="text-line">Dwelling Openings</div>
+              <div class="line-right"></div>
+            </h3>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/frame.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="glazingRatioPercent">Glazing to Wall Ratio (%)</label>
+                    <input type="number" name="glazingRatioPercent" placeholder="Enter glazing to wall ratio" ng-model="mainBuilding.dwelling.glazingRatioPercent" required="required" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.glazingRatioPercent.$touched &amp;&amp; mainbuildingForm.glazingRatioPercent.$invalid)" class="text-danger ng-hide">Glazing to Wall Ratio is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/roofLight.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="noOfRoofLights">No of Roof Glazing</label>
+                    <input type="number" name="noOfRoofLights" placeholder="Enter no of roof lights" ng-model="mainBuilding.dwelling.noOfRoofLights" required="required" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.noOfRoofLights.$touched &amp;&amp; mainbuildingForm.noOfRoofLights.$invalid)" class="text-danger ng-hide">No of Roof Glazing is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/door.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="noOfExternalDoors">No of External Doors</label>
+                    <input type="number" name="noOfExternalDoors" placeholder="Enter no of external doors" ng-model="mainBuilding.dwelling.noOfExternalDoors" required="required" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.noOfExternalDoors.$touched &amp;&amp; mainbuildingForm.noOfExternalDoors.$invalid)" class="text-danger ng-hide">No of External Doors is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-30">
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/indoorTemp.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="avgIndoorTemperature">Average Indoor Temperature (℃)</label>
+                    <div class="dropdown">
+                      <div type="button" ng-model="mainBuilding.avgIndoorTemperature" name="avgIndoorTemperature" id="avgIndoorTemperature" data-toggle="dropdown" ng-class="mainBuilding.avgIndoorTemperature === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" required="required" class="btn btn-default dropdown-toggle ng-pristine ng-untouched not-selected ng-invalid ng-invalid-required">
+                        <span class="ellipsis ng-binding">Enter average indoor temperature</span>
+                        <div class="caret"></div>
+                      </div>
+                      <div class="dropdown-menu">
+                        <!-- ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">10</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">11</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">12</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">13</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">14</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">15</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">16</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">17</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">18</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">19</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">20</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">21</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">22</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">23</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">24</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">25</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">26</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">27</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">28</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">29</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">30</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">31</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">32</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">33</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">34</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">35</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">36</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">37</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">38</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">39</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                        <li ng-repeat="item in avgIndoorTempList" ng-click="changeAvgIndoorTemp(item, 'mb')" class="ng-scope">
+                          <a href="javascript:void(0)" name="item" value="item" class="ng-binding">40</a>
+                        </li>
+                        <!-- end ngRepeat: item in avgIndoorTempList -->
+                      </div>
+                    </div>
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.avgIndoorTemperature.$touched &amp;&amp; mainbuildingForm.avgIndoorTemperature.$invalid)" class="text-danger ng-hide">Average Indoor Termperature is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/floor.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="avgGroundFloorArea">Average Ground Floor Area (m <sup>2</sup>) </label>
+                    <input type="number" name="avgGroundFloorArea" placeholder="Enter average ground gloor area" ng-model="mainBuilding.avgGroundFloorArea" required="required" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.avgGroundFloorArea.$touched &amp;&amp; mainbuildingForm.avgGroundFloorArea.$invalid)" class="text-danger ng-hide">Average Ground Floor Area is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/noOfFloor.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="noOfFloors">No of Floors</label>
+                    <input type="number" name="noOfFloors" placeholder="Enter no of floors" ng-model="mainBuilding.noOfFloors" required="required" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.noOfFloors.$touched &amp;&amp; mainbuildingForm.noOfFloors.$invalid)" class="text-danger ng-hide">No of Floors is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/floorPlan.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="totalFloorArea">Total Floor Area (m <sup>2</sup>) </label>
+                    <input type="number" name="totalFloorArea" placeholder="Enter total floor area" ng-model="mainBuilding.totalFloorArea" ng-bind="mainBuilding.totalFloorArea = mainBuilding.noOfFloors * mainBuilding.avgGroundFloorArea" ng-disabled="true" required="required" class="form-control ng-pristine ng-untouched ng-valid ng-binding ng-valid-required" disabled="disabled">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/storeyHt.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="avgStoreyHeight">Average Storey Height (m)</label>
+                    <input type="number" name="avgStoreyHeight" placeholder="Enter average storey height" ng-model="mainBuilding.avgStoreyHeight" required="required" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required">
+                    <div class="static-err-ht">
+                      <p ng-show="(mainbuildingForm.avgStoreyHeight.$touched &amp;&amp; mainbuildingForm.avgStoreyHeight.$invalid)" class="text-danger ng-hide">Avg Storey Height is required.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/dwelling.svg" alt="NO image" width="32px">
+                  <div>
+                    <label for="dwellingVolume">Dwelling Volume (m <sup>3</sup>) </label>
+                    <input type="number" name="dwellingVolume" placeholder="Enter dwelling volume" ng-model="mainBuilding.dwellingVolume" ng-bind="mainBuilding.dwellingVolume = mainBuilding.totalFloorArea *  mainBuilding.avgStoreyHeight" ng-disabled="true" required="required" class="form-control ng-pristine ng-untouched ng-valid ng-binding ng-valid-required" disabled="disabled">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="wrap-icon-input-label">
+                  <img src="/images/heat_loss_estimator/propertyType.svg" alt="NO image" width="32px">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 min-ht">
+                      <label for="propertyType">propertyType</label>
+                      <div class="dropdown">
+                        <div type="button" ng-model="mainBuilding.propertyType" name="propertyType" id="propertyType" data-toggle="dropdown" ng-class="mainBuilding.propertyType === &quot;&quot; ? &quot;not-selected&quot;: &quot;&quot;" class="btn btn-default dropdown-toggle ng-pristine ng-untouched ng-valid not-selected">
+                          <span class="ellipsis ng-binding">Enter property type</span>
+                          <div class="caret"></div>
+                        </div>
+                        <div class="dropdown-menu">
+                          <!-- ngRepeat: item in propertyTypeList -->
+                          <li ng-repeat="item in propertyTypeList" ng-click="changePropertyType(item, 'mb')" class="ng-scope">
+                            <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Detached</a>
+                          </li>
+                          <!-- end ngRepeat: item in propertyTypeList -->
+                          <li ng-repeat="item in propertyTypeList" ng-click="changePropertyType(item, 'mb')" class="ng-scope">
+                            <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Semi-Detached</a>
+                          </li>
+                          <!-- end ngRepeat: item in propertyTypeList -->
+                          <li ng-repeat="item in propertyTypeList" ng-click="changePropertyType(item, 'mb')" class="ng-scope">
+                            <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Terraced</a>
+                          </li>
+                          <!-- end ngRepeat: item in propertyTypeList -->
+                          <li ng-repeat="item in propertyTypeList" ng-click="changePropertyType(item, 'mb')" class="ng-scope">
+                            <a href="javascript:void(0)" name="item" value="item" class="ng-binding">Flat (only one ext wall)</a>
+                          </li>
+                          <!-- end ngRepeat: item in propertyTypeList -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-30 text-center mb-30">
+              <button type="submit" ng-disabled="(mainbuildingForm.$invalid || checkMainBuildingValid() || checkMbPropTypeValid())" class="btn btn-success" disabled="disabled">Next Step</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
